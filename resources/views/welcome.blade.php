@@ -179,7 +179,7 @@
                         </div>
                         <div class="inner-box">
                             <div class="link-btn">
-                                <a href="/causes" class="primary_btn">Voir les causes<i class="far fa-heart"></i></a>
+                                <a href="causes" class="primary_btn">Voir les causes<i class="far fa-heart"></i></a>
                             </div>
                             <div class="contact-info">
                                 <div class="icon"><i class="flaticon-phone"></i></div>
