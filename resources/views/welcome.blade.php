@@ -94,7 +94,7 @@
                             </h6>
                             <h2 class="banner-slider-title mb-30">Faites <br> parler votre <br>Coeur</h2>
                             <div class="banner-slde-btn">
-                                <button class="buttonc">
+                                <button class="buttonc donate_button">
                                     Faire une Dona
                                     <svg height="32" width="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0H24V24H0z" fill="none"></path><path d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z"></path></svg>
                                   </button>
@@ -122,7 +122,7 @@
                                 Faites briller l'avenir  <br>d'un enfant</h2>
                             <div class="banner-slider-btn">
 
-                                <a href="#" class="primary_btn style-seven">Faire un Don<i
+                                <a href="#" class="primary_btn style-seven donate_button">Faire un Don<i
                                         class="far fa-heart"></i></a>
 
                                     </div>
@@ -179,7 +179,7 @@
                         </div>
                         <div class="inner-box">
                             <div class="link-btn">
-                                <a href="causes" class="primary_btn">Voir les causes<i class="far fa-heart"></i></a>
+                                <a href="/public/causes" class="primary_btn">Voir les causes<i class="far fa-heart"></i></a>
                             </div>
                             <div class="contact-info">
                                 <div class="icon"><i class="flaticon-phone"></i></div>
@@ -300,7 +300,7 @@
                                     <li>Collecté<span class="crl2">500.000 f</span></li>
                                     <li>Reste<span class="crl3"> 500.000 <fieldset></fieldset></span></li>
                                 </ul>
-                                <a href="donation-details.html" class="primary_btn s-two">Dona<i
+                                <a href="#" class="primary_btn s-two donate_button">Dona<i
                                         class="far fa-heart"></i></a>
                             </div>
                         </div>
@@ -334,7 +334,7 @@
                                     <li>Collecté<span class="crl2">1.500.000 f</span></li>
                                     <li>Reste<span class="crl3"> 500.000 f</span></li>
                                 </ul>
-                                <a href="donation-details.html" class="primary_btn s-two">Dona<i
+                                <a href="#" class="primary_btn s-two donate_button">Dona<i
                                         class="far fa-heart"></i></a>
                             </div>
                         </div>
@@ -368,11 +368,12 @@
                                     <li>Collecté<span class="crl2">1.500.000 f</span></li>
                                     <li>Reste<span class="crl3"> 500.000 f</span></li>
                                 </ul>
-                                <a href="donation-details.html" class="primary_btn s-two">Dona<i
+                                <a href="#" class="primary_btn s-two donate_button">Dona<i
                                         class="far fa-heart"></i></a>
                             </div>
                         </div>
                     </div>
+
                     <div class="column">
                         <div class="causes-block">
                             <div class="image">
@@ -402,148 +403,17 @@
                                     <li>Raise<span class="crl2">$562</span></li>
                                     <li>To Go<span class="crl3"> $864</span></li>
                                 </ul>
-                                <a href="donation-details.html" class="primary_btn s-two">Donation<i
+                                <a href="#" class="primary_btn s-two donate_button">Donation<i
                                         class="far fa-heart"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="causes-block">
-                            <div class="image">
-                                <img src="assets/images/resource/charity.jpg" alt="">
-                                <div class="progress-wrap">
-                                    <div class="progress-box">
-                                        <div class="inner-box">
-                                            <div class="graph-outer">
-                                                <input type="text" class="dial" data-fgColor="#f74f22"
-                                                    data-bgColor="none" data-width="75" data-height="75"
-                                                    data-linecap="normal" value="83">
-                                                <div class="inner-text count-box"><span class="count-text" data-stop="83"
-                                                        data-speed="2000"></span><span class="count-Parsent">%</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <h4>Education</h4>
-                                        <div class="text">Raised<span class="crl4"> $256</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4>Raise Hand To The Poor Children Education For Better Future</h4>
-                                <ul>
-                                    <li>Goal<span>$34562</span></li>
-                                    <li>Raise<span class="crl2">$562</span></li>
-                                    <li>To Go<span class="crl3"> $864</span></li>
-                                </ul>
-                                <a href="donation-details.html" class="primary_btn s-two">Donation<i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="causes-block">
-                            <div class="image">
-                                <img src="assets/images/resource/charity-3.jpg" alt="">
-                                <div class="progress-wrap">
-                                    <div class="progress-box">
-                                        <div class="inner-box">
-                                            <div class="graph-outer">
-                                                <input type="text" class="dial" data-fgColor="#65c9bb"
-                                                    data-bgColor="none" data-width="75" data-height="75"
-                                                    data-linecap="normal" value="76">
-                                                <div class="inner-text count-box"><span class="count-text" data-stop="76"
-                                                        data-speed="2000"></span><span class="count-Parsent">%</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <h4>Foods</h4>
-                                        <div class="text">Raised<span class="crl5">$256</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4>Raise Hand To The Poor Children Education For Better Future</h4>
-                                <ul>
-                                    <li>Goal<span>$34562</span></li>
-                                    <li>Raise<span class="crl2">$562</span></li>
-                                    <li>To Go<span class="crl3"> $864</span></li>
-                                </ul>
-                                <a href="donation-details.html" class="primary_btn s-two">Donation<i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="causes-block">
-                            <div class="image">
-                                <img src="assets/images/resource/charity-3.jpg" alt="">
-                                <div class="progress-wrap">
-                                    <div class="progress-box">
-                                        <div class="inner-box">
-                                            <div class="graph-outer">
-                                                <input type="text" class="dial" data-fgColor="#ffac00"
-                                                    data-bgColor="none" data-width="75" data-height="75"
-                                                    data-linecap="normal" value="83">
-                                                <div class="inner-text count-box"><span class="count-text" data-stop="83"
-                                                        data-speed="2000"></span><span class="count-Parsent">%</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <h4>Child Life</h4>
-                                        <div class="text">Raised<span class="crl6"> $256</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4>Raise Hand To The Poor Children Education For Better Future</h4>
-                                <ul>
-                                    <li>Goal<span>$34562</span></li>
-                                    <li>Raise<span class="crl2">$562</span></li>
-                                    <li>To Go<span class="crl3"> $864</span></li>
-                                </ul>
-                                <a href="donation-details.html" class="primary_btn s-two">Donation<i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="causes-block">
-                            <div class="image">
-                                <img src="assets/images/resource/charity-4.jpg" alt="">
-                                <div class="progress-wrap">
-                                    <div class="progress-box">
-                                        <div class="inner-box">
-                                            <div class="graph-outer">
-                                                <input type="text" class="dial" data-fgColor="#f74f22"
-                                                    data-bgColor="none" data-width="75" data-height="75"
-                                                    data-linecap="normal" value="75">
-                                                <div class="inner-text count-box"><span class="count-text" data-stop="75"
-                                                        data-speed="2000"></span><span class="count-Parsent">%</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <h4>Education</h4>
-                                        <div class="text">Raised<span class="crl7"> $256</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4>Raise Hand To The Poor Children Education For Better Future</h4>
-                                <ul>
-                                    <li>Goal<span>$34562</span></li>
-                                    <li>Raise<span class="crl2">$562</span></li>
-                                    <li>To Go<span class="crl3"> $864</span></li>
-                                </ul>
-                                <a href="donation-details.html" class="primary_btn s-two">Donation<i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
+            <center>
+                <a href="/public/causes" class="primary_btn s-two donate_button">Voir toutes les causes<i
+                    class="far fa-heart"></i></a>
+            </center>
             </div>
         </section>
 

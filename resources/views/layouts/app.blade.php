@@ -112,7 +112,7 @@
 
                             <div class="menu-bar sidemenu-nav-toggler"><img src="assets/images/icons/icon-menu.png"
                                     alt=""></div>
-                            <a href="donate.html" class="primary_btn style-seven">Faire une Dona<i
+                            <a href="#" class="primary_btn style-seven donate_button">Faire une Dona<i
                                     class="far fa-heart"></i></a>
                         </div>
                     </div>
@@ -295,19 +295,19 @@
                                     </div>
                                     <div class="icon-list">
                                         <ul>
-                                            <li><a href="donation-details.html"><i
+                                            <li><a href="#"><i
                                                         class="far fa-arrow-right"></i>Education</a></li>
-                                            <li><a href="donation-details.html"><i
+                                            <li><a href="#"><i
                                                         class="far fa-arrow-right"></i>Ecosystems</a></li>
-                                            <li><a href="donation-details.html"><i
+                                            <li><a href="#"><i
                                                         class="far fa-arrow-right"></i>Medical</a></li>
-                                            <li><a href="donation-details.html"><i
+                                            <li><a href="#"><i
                                                         class="far fa-arrow-right"></i>Foods</a></li>
-                                            <li><a href="donation-details.html"><i
+                                            <li><a href="#"><i
                                                         class="far fa-arrow-right"></i>Shelter</a></li>
-                                            <li><a href="donation-details.html"><i
+                                            <li><a href="#"><i
                                                         class="far fa-arrow-right"></i>Water</a></li>
-                                            <li><a href="donation-details.html"><i
+                                            <li><a href="#"><i
                                                         class="far fa-arrow-right"></i>Donations</a></li>
                                         </ul>
                                     </div>

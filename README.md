@@ -1,8 +1,6 @@
 ![logo](docs/logom.png)
 
-Ce projet est est une outil web interactif de sondage et d'analyse électorale | Hackathon MA VOIX 2023. Il est développé en PHP (Laravel) et
-utilise la base de données
-MySQL. 
+Cette plateforme permettra aux utilisateurs de faire des dons en toute confiance via MTN Mobile Money une initiative née lors du Hackathon MOMO 2023. Le projet est construit avec PHP (Laravel) et utilise une base de données MySQL. Votre soutien nous aidera à continuer à fournir des analyses précises et des fonctionnalités innovantes qui renforcent la démocratie et l'engagement citoyen.
 
 
 ![Aperçu](docs/home.png)

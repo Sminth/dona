@@ -146,7 +146,7 @@
                             <li>collecte<span class="crl2">500.000 f</span></li>
                             <li>reste<span class="crl3"> 500.000 f</span></li>
                         </ul>
-                        <a href="donation-details.html" class="primary_btn s-two">faire un dona<i class="far fa-heart"></i></a>
+                        <a href="#" class="primary_btn s-two donate_button">faire un dona<i class="far fa-heart"></i></a>
                     </div>
                 </div>
             </div>
@@ -178,7 +178,7 @@
                             <li>collecte<span class="crl2">500.000 f</span></li>
                             <li>reste<span class="crl3"> 500.000 f</span></li>
                         </ul>
-                        <a href="donation-details.html" class="primary_btn s-two">Donation<i class="far fa-heart"></i></a>
+                        <a href="#" class="primary_btn s-two donate_button">Donation<i class="far fa-heart"></i></a>
                     </div>
                 </div>
             </div>
@@ -211,7 +211,7 @@
                             <li>collecte<span class="crl2">500.000 f</span></li>
                             <li>reste<span class="crl3"> 500.000 f</span></li>
                         </ul>
-                        <a href="donation-details.html" class="primary_btn s-two">Donation<i class="far fa-heart"></i></a>
+                        <a href="#" class="primary_btn s-two donate_button">Donation<i class="far fa-heart"></i></a>
                     </div>
                 </div>
             </div>
@@ -243,7 +243,7 @@
                             <li>collecte<span class="crl2">500.000 f</span></li>
                             <li>reste<span class="crl3"> 500.000 f</span></li>
                         </ul>
-                        <a href="donation-details.html" class="primary_btn s-two">Donation<i class="far fa-heart"></i></a>
+                        <a href="#" class="primary_btn s-two donate_button">Donation<i class="far fa-heart"></i></a>
                     </div>
                 </div>
             </div>
@@ -275,7 +275,7 @@
                             <li>collecte<span class="crl2">500.000 f</span></li>
                             <li>reste<span class="crl3"> 500.000 f</span></li>
                         </ul>
-                        <a href="donation-details.html" class="primary_btn s-two">faire un dona<i class="far fa-heart"></i></a>
+                        <a href="#" class="primary_btn s-two donate_button">faire un dona<i class="far fa-heart"></i></a>
                     </div>
                 </div>
             </div>
@@ -307,7 +307,7 @@
                             <li>collecte<span class="crl2">500.000 f</span></li>
                             <li>reste<span class="crl3"> 500.000 f</span></li>
                         </ul>
-                        <a href="donation-details.html" class="primary_btn s-two">faire un dona<i class="far fa-heart"></i></a>
+                        <a href="#" class="primary_btn s-two donate_button">faire un dona<i class="far fa-heart"></i></a>
                     </div>
                 </div>
             </div>
@@ -339,7 +339,7 @@
                             <li>collecte<span class="crl2">500.000 f</span></li>
                             <li>reste<span class="crl3"> 500.000 f</span></li>
                         </ul>
-                        <a href="donation-details.html" class="primary_btn s-two">Faire un dona<i class="far fa-heart"></i></a>
+                        <a href="#" class="primary_btn s-two donate_button">Faire un dona<i class="far fa-heart"></i></a>
                     </div>
                 </div>
             </div>
@@ -371,7 +371,7 @@
                             <li>collecte<span class="crl2">500.000 f</span></li>
                             <li>reste<span class="crl3"> 500.000 f</span></li>
                         </ul>
-                        <a href="donation-details.html" class="primary_btn s-two">faire un dona<i class="far fa-heart"></i></a>
+                        <a href="#" class="primary_btn s-two donate_button">faire un dona<i class="far fa-heart"></i></a>
                     </div>
                 </div>
             </div>
@@ -403,7 +403,7 @@
                             <li>collecte<span class="crl2">500.000 f</span></li>
                             <li>reste<span class="crl3"> 500.000 f</span></li>
                         </ul>
-                        <a href="donation-details.html" class="primary_btn s-two">faire un dona<i class="far fa-heart"></i></a>
+                        <a href="#" class="primary_btn s-two donate_button">faire un dona<i class="far fa-heart"></i></a>
                     </div>
                 </div>
             </div>
