@@ -83,7 +83,7 @@
             <div class="banner-block-one">
 
                 <div class="banner-image-shape"><img src="" alt=""></div>
-                <div class="image-layer" style="background-image:url(assets/images/resource/Child.jpg)">
+                <div class="image-layer" style="background-image:url(assets/images/noe.jpg);background-position:center;background-size:contain;background-repeat:no-repeat">
                 </div>
 
                 <div class="theme_container">
@@ -109,7 +109,7 @@
             </div>
 
             <div class="banner-block-one">
-                <div class="image-layer" style="background-image:url(assets/images/main-slider/main-slider.jpg)">
+                <div class="image-layer" style="background-image:url(assets/images/rentre.jpg);background-position:center;background-size:contain;background-repeat:no-repeat">
                 </div>
                 <div class="theme_container">
                     <div class="content-box">
@@ -239,7 +239,6 @@
                                 <li class="donation-form-one-price-value" data-dollars='500'>50 000 F</li>
                                 <li class="donation-form-one-price-value" data-dollars='100'>30 000 F</li>
                                 <li class="donation-form-one-price-value" data-dollars='25'>15 000 F</li>
-                                <li class="donation-form-one-price-value" data-dollars='25'>Autre</li>
                                 <li class="other-input"></li>
                             </ul>
                             <div class="from-button"><button class="primary_btn-one donate_button">Faire un don<i
@@ -248,7 +247,9 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="image"><img src="assets/images/resource/btn.jpg" alt=""></div>
+
+                    <div class="image" style="height: 100%"><img src="assets/images/enf.jpg" style="widh:100%; height:90%" alt=""></div>
+
                 </div>
             </div>
         </div>
@@ -606,37 +607,37 @@
                 <div class="col-lg-8 col-md-8">
                     <div class="gallery-block">
                         <div class="image"><img src="assets/images/resource/Child.jpg" alt=""></div>
-                        <div class="inner-box">
+                        {{-- <div class="inner-box">
                             <h4><a href="our-mission.html">Happy Child Group</a></h4>
                             <div class="text">Carity Fund</div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 flex-box-one">
                     <div class="gallery-block">
-                        <div class="image"><img src="assets/images/resource/Child-2.jpg" alt=""></div>
-                        <div class="inner-box">
+                        <div class="image"><img src="assets/images/noel1.jpg" alt=""></div>
+                        {{-- <div class="inner-box">
                             <h4><a href="our-mission.html">Happy Child Group</a></h4>
                             <div class="text">Carity Fund</div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4">
                     <div class="gallery-block">
-                        <div class="image"><img src="assets/images/resource/Child-3.jpg" alt=""></div>
-                        <div class="inner-box">
+                        <div class="image"><img src="assets/images/noel2.jpg" alt=""></div>
+                        {{-- <div class="inner-box">
                             <h4><a href="our-mission.html">Happy Child Group</a></h4>
                             <div class="text">Carity Fund</div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-8">
                     <div class="gallery-block">
-                        <div class="image"><img src="assets/images/resource/Child-4.jpg" alt=""></div>
-                        <div class="inner-box">
+                        <div class="image"><img src="assets/images/noel3.jpg" alt=""></div>
+                        {{-- <div class="inner-box">
                             <h4><a href="our-mission.html">Happy Child Group</a></h4>
                             <div class="text">Carity Fund</div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -715,8 +716,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 image-column" style="background-image: url(assets/images/resource/test.jpg);">
-                    <div class="image"><img src="assets/images/resource/test.jpg" alt=""></div>
+                <div class="col-lg-6 image-column" style="background-image: url(assets/images/resource/Child.jpg);">
+                    <div class="image"><img src="assets/images/resource/Child.jpg" alt=""></div>
                 </div>
             </div>
         </div>
