@@ -94,7 +94,7 @@
 
                                             </li>
 
-                                            <li><a href="/causes">Nos Causes</a>
+                                            <li><a href="/public/causes">Nos Causes</a>
 
                                             </li>
                                             <li class="#"><a href="#">Parrainer un enfant</a>
