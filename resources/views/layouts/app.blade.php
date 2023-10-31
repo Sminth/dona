@@ -179,67 +179,56 @@
                         <div class="logo"><a href="index.html">
                             <h1 style="color: white;">DONA</h1>
                         </a></div>
-                        <div class="text">We Have Over 40 Payment Ways for Locking the Lowest Room Rates. No Credit
-                            Card Needed! Read Reviews from Verified Guests.</div>
+                        <div class="text">Nous avons créé une plateforme révolutionnaire pour garantir la transparence et la confiance dans les dons en ligne. Soutenez des causes vérifiées avec DONA.</div>
                     </div>
                     <div class="footer-widget-item recent-news-widget widget">
-                        <h4>Instagram Feeds</h4>
+                        <h4>Flux Instagram</h4>
                         <div class="footer-widget-news">
                             <ul>
                                 <li>
                                     <div class="img-box">
                                         <img src="assets/images/resource/footer-1.jpg" alt="">
                                     </div>
-
                                     <div class="text-box">
-                                        <p><span class="far fa-calendar-alt"></span>24th January
-                                            2021</p>
-                                        <h6><a href="blog-details.html">We can build anything ni <br>hill ground or
-                                                building.</a></h6>
+                                        <p><span class="far fa-calendar-alt"></span>24 janvier 2023</p>
+                                        <h6><a href="blog-details.html">Rejoignez-nous dans notre mission pour une philanthropie transparente.</a></h6>
                                     </div>
                                 </li>
-
                                 <li>
                                     <div class="img-box">
                                         <img src="assets/images/resource/footer-2.jpg" alt="">
                                     </div>
-
                                     <div class="text-box">
-                                        <p><span class="far fa-calendar-alt"></span>24th January
-                                            2021</p>
-                                        <h6><a href="blog-details.html">We can build anything ni <br>hill ground or
-                                                building.</a></h6>
+                                        <p><span class="far fa-calendar-alt"></span>24 janvier 2023</p>
+                                        <h6><a href="blog-details.html">Découvrez les histoires de ceux que nous avons aidés grâce à vos dons.</a></h6>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
-
                     <div class="widget contact-widget">
                         <div class="footer-widget-item">
                             <div class="title">
-                                <h2>About Us</h2>
+                                <h2>À propos de nous</h2>
                             </div>
                             <div class="our-info">
                                 <div class="text">
-                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusanum
-                                        doloremue laudantiue totame</p>
+                                    <p>Notre mission est de renforcer la confiance dans les dons en ligne en garantissant transparence et traçabilité. Avec DONA, chaque don fait une différence tangible.</p>
                                 </div>
                             </div>
                             <div class="icon-list">
                                 <ul>
                                     <li>
                                         <div class="icon"><i class="far fa-map-marker-alt"></i></div>
-                                        <div class="text-location">4486 Richards Avenue, Modesto CA - 95354</div>
+                                        <div class="text-location">123 rue de la Bienfaisance, Paris - 75000</div>
                                     </li>
                                     <li>
                                         <div class="icon"><i class="far fa-envelope"></i></div>
-                                        <div class="text"><a href="email:hotline@gmail.com">hotline@gmail.com</a>
-                                        </div>
+                                        <div class="text"><a href="email:support@dona.com">support@dona.com</a></div>
                                     </li>
                                     <li>
                                         <div class="icon"><i class="far fa-phone"></i></div>
-                                        <div class="text"><a href="tel:+012(345)6789">+012 (345) 6789</a> </div>
+                                        <div class="text"><a href="tel:+012(345)6789">+33 (0)1 23 45 67 89</a> </div>
                                     </li>
                                 </ul>
                             </div>
@@ -248,6 +237,7 @@
                 </div>
             </div>
         </section>
+
 
         @yield('content')
 

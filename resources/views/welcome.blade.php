@@ -645,7 +645,7 @@
     </section>
 
     <!-- Partner section -->
-    <section class="partner">
+    {{-- <section class="partner">
         <div class="bg" style="background-image: url(assets/images/background/cta.jpg);"></div>
         <div class="theme_container">
             <div class="five-item-carousel owl-theme owl-carousel">
@@ -656,10 +656,9 @@
                 <div class="image"><img src="assets/images/resource/cta-4.png" alt=""></div>
                 <div class="image"><img src="assets/images/resource/cta-5.png" alt=""></div>
 
-
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <!-- testimonial section -->
     <section class="testimonial">
@@ -670,7 +669,8 @@
                         <div class="sub-title mb-20"><span class="title-sep-left"><img
                                     src="assets/images/resource/icon-4.png" alt=""></span>
                                     Nos témoignages</div>
-                        <h2 class="sec-title text-light">What People Say About <br> Our Company</h2>
+                        <h2 class="sec-title text-light">Ce que les gens disent
+                             <br> de nous</h2>
                         <div class="testimonial-area">
                             <div class="one-item-carousel owl-theme owl-carousel owl-dot-s-1">
                                 <div class="testimonial-block">
@@ -685,7 +685,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="testimonial-block">
+                                {{-- <div class="testimonial-block">
                                     <div class="icon"><i class="flaticon-quote"></i></div>
                                     <div class="text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                                         accusantium dolorem laudantiums totam aperiam eaqupsa inventore </div>
@@ -697,20 +697,8 @@
                                             <div class="designation">Business Manager</div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="testimonial-block">
-                                    <div class="icon"><i class="flaticon-quote"></i></div>
-                                    <div class="text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                        accusantium dolorem laudantiums totam aperiam eaqupsa inventore </div>
-                                    <div class="author-info">
-                                        <div class="author-thumb"><img src="assets/images/resource/test.png"
-                                                alt=""></div>
-                                        <div class="author-content">
-                                            <div class="name">Steven M. Robinson</div>
-                                            <div class="designation">Business Manager</div>
-                                        </div>
-                                    </div>
-                                </div>
+                                </div> --}}
+
                             </div>
                         </div>
                     </div>
@@ -821,117 +809,54 @@
                                 <div class="donate-fomr-popup-close"><i class="fas fa-times"></i></div>
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
-                                        <h3 class="panel-title">Donating Amount</h3>
+                                        <h3 class="panel-title">Informations Personnelles</h3>
                                     </div>
-                                    <div class="donate-price-wrap">$<span class="donate-price"></span></div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                                <h3 class="panel-title">Personal Information</h3>
+                                    <div class="panel-body">
+                                        <form id="formulaire-donation">
+                                            <div class="form-group">
+                                                <input id="nom_complet" name="nom_complet" type="text" placeholder="Nom complet" class="form-control" required>
                                             </div>
-                                            <div class="panel-body">
-                                                <div class="bodyTest">
-                                                    <form class="">
-                                                        <div class="row">
-                                                            <div class="col-md-12">
-                                                                <!-- first name input-->
-                                                                <div class="form-group">
-                                                                    <div class="">
-                                                                        <input id="name" name="name"
-                                                                            type="text" placeholder="name"
-                                                                            class="form-control">
-                                                                        <p class="help-block"></p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-12">
-                                                                <div class="form-group">
-                                                                    <div class=" ">
-                                                                        <input id="address" name="address"
-                                                                            type="text" placeholder="address"
-                                                                            class="form-control">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <!-- last name input-->
-                                                        <div class="row">
-                                                            <div class="col-md-12">
-                                                                <div class="control-group">
-                                                                    <div class="">
-                                                                        <input id="city" name="city"
-                                                                            type="text" autocomplete="address-level2"
-                                                                            placeholder="city" class="form-control">
-                                                                        <p class="help-block"></p>
-                                                                    </div>
-                                                                </div>
-                                                                <!-- region input-->
-                                                            </div>
-                                                            <div class="col-md-12">
-                                                                <div class="control-group">
-                                                                    <div class="">
-                                                                        <input id="postal-code" name="postal-code"
-                                                                            type="text" autocomplete="postal-code"
-                                                                            placeholder="zip or postal code"
-                                                                            class="form-control">
-                                                                        <p class="help-block"></p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                </div>
+                                            <div class="form-group">
+                                                <input id="email" name="email" type="email" placeholder="Email (Facultatif)" class="form-control">
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                                <h3 class="panel-title">Payment Details</h3>
+                                            <div class="form-group">
+                                                <input type="checkbox" id="rester_anonyme" name="rester_anonyme">
+                                                <label for="rester_anonyme">Rester Anonyme</label>
                                             </div>
-                                            <div class="panel-body">
-                                                <form role="form" id="payment-form">
-                                                    <div class="form-group">
-                                                        <div class="input-group">
-                                                            <input type="text" class="form-control" name="cardNumber"
-                                                                placeholder="Valid Card Number" required=""
-                                                                autofocus="" data-stripe="number">
-                                                            <span class="input-group-block">
-                                                                <i class="fa fa-credit-card"></i>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <input type="text" class="form-control" name="expMonth"
-                                                            placeholder="MM" required="" data-stripe="exp_month">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <input type="text" class="form-control" name="expYear"
-                                                            placeholder="YY" required="" data-stripe="exp_year">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <input type="password" class="form-control" name="cvCode"
-                                                            placeholder="CV" required="" data-stripe="cvc">
-                                                    </div>
+                                            <div class="form-group">
+                                                <input id="numero_momo" name="numero_momo" type="text" placeholder="Numéro Mobile Money" class="form-control" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="montant_don" name="montant_don" type="number" placeholder="Montant du don" class="form-control" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="checkbox" id="suivre_actions" name="suivre_actions">
+                                                <label for="suivre_actions">Suivre les actions relatives à ce don</label>
+                                            </div>
+                                            <button type="button" onclick="
+                                              var form = document.getElementById('formulaire-donation');
+                                              var nomComplet = form.nom_complet.value;
+                                              var email = form.email.value;
+                                              var resterAnonyme = form.rester_anonyme.checked;
+                                              var numeroMomo = form.numero_momo.value;
+                                              var montantDon = form.montant_don.value;
 
-                                                    <div class="row">
-                                                        <div class="col-xs-12">
-                                                            <button class="primary_btn" type="submit">Donate Now <i
-                                                                    class="far fa-heart"></i></button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row" style="display:none;">
-                                                        <div class="col-xs-12">
-                                                            <p class="payment-errors"></p>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
+                                              if (!resterAnonyme && (!nomComplet || !email)) {
+                                                alert('Veuillez entrer le nom complet et l\'email ou choisir de rester anonyme.');
+                                                return;
+                                              }
+
+                                              if (!numeroMomo || !montantDon) {
+                                                alert('Veuillez entrer le numéro Mobile Money et le montant du don.');
+                                                return;
+                                              }
+
+                                              alert('Paiement en cours de traitement...');  // Remplacer par votre propre logique
+                                            ">Soumettre</button>
+                                        </form>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
