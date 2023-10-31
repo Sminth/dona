@@ -443,7 +443,7 @@
                     <div class="column">
                         <div class="causes-block">
                             <div class="image">
-                                <img src="assets/images/resource/charity-2.jpg" alt="">
+                                <img src="assets/images/resource/charity-3.jpg" alt="">
                                 <div class="progress-wrap">
                                     <div class="progress-box">
                                         <div class="inner-box">
@@ -674,14 +674,13 @@
                             <div class="one-item-carousel owl-theme owl-carousel owl-dot-s-1">
                                 <div class="testimonial-block">
                                     <div class="icon"><i class="flaticon-quote"></i></div>
-                                    <div class="text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                        accusantium dolorem laudantiums totam aperiam eaqupsa inventore </div>
+                                    <div class="text">J'ai découvert un site de dons lorsque j'ai cherché un moyen de venir en aide à des familles dans le besoin. J'ai été impressionné par la simplicité du processus. J'ai pu choisir des campagnes auxquelles je voulais contribuer, faire un don en ligne, et voir comment mon argent était utilisé pour aider des personnes dans le besoin. C'était gratifiant de savoir que mon soutien faisait une réelle différence dans la vie des autres. Je continuerai à utiliser ce site pour donner et aider autant que possible.</div>
                                     <div class="author-info">
                                         <div class="author-thumb"><img src="assets/images/resource/test.png"
                                                 alt=""></div>
                                         <div class="author-content">
-                                            <div class="name">Steven M. Robinson</div>
-                                            <div class="designation">Business Manager</div>
+                                            <div class="name">ATTITSO JEOL</div>
+                                            <div class="designation">CEO d'univers 10</div>
                                         </div>
                                     </div>
                                 </div>
