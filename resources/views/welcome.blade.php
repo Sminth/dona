@@ -122,7 +122,7 @@
                                 Faites briller l'avenir  <br>d'un enfant</h2>
                             <div class="banner-slider-btn">
 
-                                <a href="donate.html" class="primary_btn style-seven">Faire un Don<i
+                                <a href="#" class="primary_btn style-seven">Faire un Don<i
                                         class="far fa-heart"></i></a>
 
                                     </div>
@@ -179,7 +179,7 @@
                         </div>
                         <div class="inner-box">
                             <div class="link-btn">
-                                <a href="about.html" class="primary_btn">Voir les causes<i class="far fa-heart"></i></a>
+                                <a href="/causes" class="primary_btn">Voir les causes<i class="far fa-heart"></i></a>
                             </div>
                             <div class="contact-info">
                                 <div class="icon"><i class="flaticon-phone"></i></div>
@@ -667,7 +667,8 @@
                 <div class="col-lg-6">
                     <div class="inner-container">
                         <div class="sub-title mb-20"><span class="title-sep-left"><img
-                                    src="assets/images/resource/icon-4.png" alt=""></span>Our Testimonials</div>
+                                    src="assets/images/resource/icon-4.png" alt=""></span>
+                                    Nos témoignages</div>
                         <h2 class="sec-title text-light">What People Say About <br> Our Company</h2>
                         <div class="testimonial-area">
                             <div class="one-item-carousel owl-theme owl-carousel owl-dot-s-1">
@@ -730,10 +731,10 @@
                     <div class="counter-block-one">
                         <div class="count-outer count-box">
                             <div class="icon"><i class="flaticon-charity"></i></div>
-                            <span class="count-text" data-speed="3000" data-stop="5260">0</span><span
+                            <span class="count-text" data-speed="3000" data-stop="10">0</span><span
                                 class="plus">+</span>
                             <div class="text">
-                                <p>Project Done</p>
+                                <p>Projet terminé</p>
                             </div>
                         </div>
                     </div>
@@ -744,10 +745,10 @@
                     <div class="counter-block-one">
                         <div class="count-outer count-box">
                             <div class="icon"><i class="flaticon-volunteer"></i></div>
-                            <span class="count-text" data-speed="3000" data-stop="7853">0</span><span
+                            <span class="count-text" data-speed="3000" data-stop="20">0</span><span
                                 class="plus">+</span>
                             <div class="text">
-                                <p>Expert Volunteer</p>
+                                <p>Bénévole</p>
                             </div>
                         </div>
                     </div>
@@ -758,10 +759,10 @@
                     <div class="counter-block-one">
                         <div class="count-outer count-box">
                             <div class="icon"><i class="flaticon-debit-card"></i></div>
-                            <span class="count-text" data-speed="3000" data-stop="8564">0</span><span
+                            <span class="count-text" data-speed="3000" data-stop="5">0</span><span
                                 class="plus">+</span>
                             <div class="text">
-                                <p>Global Partners</p>
+                                <p>Partenaires</p>
                             </div>
                         </div>
                     </div>
@@ -772,10 +773,10 @@
                     <div class="counter-block-one">
                         <div class="count-outer count-box">
                             <div class="icon"><i class="flaticon-solidarity"></i></div>
-                            <span class="count-text" data-speed="3000" data-stop="8962">0</span><span
-                                class="plus">+</span>
+                            <span class="count-text" data-speed="3000" data-stop="5000000">0</span><span
+                                class="plus"> F+</span>
                             <div class="text">
-                                <p>Raised Now</p>
+                                <p>Levé de don</p>
                             </div>
                         </div>
                     </div>
@@ -793,8 +794,8 @@
                 <div class="col-lg-6">
                     <div class="footer-counter-block">
                         <div class="count-outer count-box">
-                            <span class="count-text" data-speed="3000" data-stop="25360">0</span><span
-                                class="plus">+</span>
+                            <span class="count-text" data-speed="3000" data-stop="5000000">0</span><span
+                                class="plus"> F+</span>
                             <span class="crl3">
                                 Levé pour un don</span>
                         </div>
