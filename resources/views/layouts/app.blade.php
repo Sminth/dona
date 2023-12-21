@@ -97,7 +97,7 @@
                                             <li><a href="/public/causes">Nos Causes</a>
 
                                             </li>
-                                            <li class="#"><a href="#">Parrainer un enfant</a>
+                                            <li class="#"><a href="/cartographie">Cartographie des causes</a>
 
                                             </li>
                                             <li><a href="/contact">Nous Contactez</a></li>
@@ -181,7 +181,7 @@
                         </a></div>
                         <div class="text">Nous avons créé une plateforme révolutionnaire pour garantir la transparence et la confiance dans les dons en ligne. Soutenez des causes vérifiées avec DONA.</div>
                     </div>
-                    <div class="footer-widget-item recent-news-widget widget">
+                    {{-- <div class="footer-widget-item recent-news-widget widget">
                         <h4>Flux Instagram</h4>
                         <div class="footer-widget-news">
                             <ul>
@@ -205,7 +205,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="widget contact-widget">
                         <div class="footer-widget-item">
                             <div class="title">
@@ -220,7 +220,7 @@
                                 <ul>
                                     <li>
                                         <div class="icon"><i class="far fa-map-marker-alt"></i></div>
-                                        <div class="text-location">123 rue de la Bienfaisance, Paris - 75000</div>
+                                        <div class="text-location">Cocody Deux plateau, Rue k104</div>
                                     </li>
                                     <li>
                                         <div class="icon"><i class="far fa-envelope"></i></div>
@@ -228,7 +228,7 @@
                                     </li>
                                     <li>
                                         <div class="icon"><i class="far fa-phone"></i></div>
-                                        <div class="text"><a href="tel:+012(345)6789">+33 (0)1 23 45 67 89</a> </div>
+                                        <div class="text"><a href="tel:+012(345)6789">+225 07 88 36 4403</a> </div>
                                     </li>
                                 </ul>
                             </div>

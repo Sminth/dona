@@ -1,0 +1,133 @@
+
+#map {
+  position: absolute;
+  top: 120px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+#votesChart {
+    margin-top: 20px;
+    max-width: 100%;
+}
+
+/* Styles existants */
+#sidebar {
+  overflow-y: auto;
+  z-index: 111111111111;
+  position: absolute;
+  top: 120px;
+  left: 0;
+  height: calc(100vh - 60px);
+  width: 250px; /* Largeur par défaut pour les écrans moyens */
+  background-color: white;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Pour les grands écrans */
+@media (min-width: 992px) {
+  #sidebar {
+    width: 400px; /* Largeur augmentée pour les grands écrans */
+  }
+}
+
+/* Pour les écrans de téléphone */
+@media (max-width: 576px) {
+  #sidebar {
+    top: 0;
+    height: 100vh;
+    width: 100%; /* Occupe toute la largeur de l'écran */
+  }
+}
+
+/* Styles pour le contenu du sidebar */
+#sidebar h2 {
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+#sidebar p {
+  color: #666;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+#sidebar img {
+  border-radius: 50%; /* Rend l'image circulaire */
+  margin-bottom: 15px;
+}
+
+/* Icônes FontAwesome pour le contenu */
+.icon-style {
+  color: #007bff; /* Couleur bleue par défaut de Bootstrap */
+  margin-right: 8px;
+}
+
+#sidebar.open {
+  transform: translateX(0);
+}
+#search-results {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: none;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+#legend {
+    position: absolute;
+    top: 130px;
+    right: 100px;
+    width: 330px;
+    height: calc(100vh - 160px); /* Hauteur définie ici */
+    overflow-y: auto; /* Permet le défilement si le contenu déborde */
+    padding: 10px;
+    z-index: 10;
+  }
+
+#vote{
+  background-color: #fff;
+  border: 1px solid #ccc;
+  height: 250px;
+  padding:  10px;
+  margin-bottom: 10px;
+  z-index: 10;
+}
+
+
+.legend{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    /* height: 200px; */
+    padding:  10px;
+    margin-bottom: 10px;
+    z-index: 10;
+  }
+  .participation{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    /* height: 200px; */
+    padding:  10px;
+    margin-bottom: 10px;
+    z-index: 10;
+  }
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.legend-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}

@@ -122,7 +122,7 @@
                                 Faites briller l'avenir  <br>d'un enfant</h2>
                             <div class="banner-slider-btn">
 
-                                <a href="#" class="primary_btn style-seven donate_button">Faire un Don<i
+                                <a href="#" class="primary_btn style-seven donate_button">Faire une Dona<i
                                         class="far fa-heart"></i></a>
 
                                     </div>
@@ -134,6 +134,230 @@
         </div>
     </section>
     <!--End Banner Section One -->
+
+    <section class="cta">
+        <div class="bg" style="background-image: url(assets/images/background/map.png);"></div>
+        <div class="theme_container">
+
+            <div class="cta-text text-center mb-40"><span>Des petits</span> Dons <span>pour</span> de Grand
+                <span>Impact</span></div>
+            <div class="text text-center mb-35">contribuer facilement à des causes qui vous tiennent à cœur</div>
+            <div class="inner-box">
+                <div class="link-btn"><a href="causes" class="primary_btn-one">Voir toutes les causes<i
+                            class="far fa-heart"></i></a></div>
+
+                <div class="contact-info">
+                    <div class="icon"><i class="flaticon-phone"></i></div>
+                    <div class="contact-number">
+                        <div class="number">Contact <br><a href="tel:+012(345)6789"><span>+225 07 88 36 4403</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+            <!--  Causes Section -->
+            <section class="causes">
+                <div class="theme_container">
+                    <div class="title-box">
+                        <div class="sub-title mb-20"><span class="title-sep-left"><img src="assets/images/resource/icon-4.png"
+                                    alt=""></span>Causes Populaires</div>
+                        <h2 class="sec-title mb-56">Faites un simple Don <br> et impacter une vie</h2>
+                        <div class="cause-carousel-nav-btn carousel-nav-btn-s-1 owl-nav-s-1">
+                            <a href="#" class="carousel-nav-btn-s-1-prev carousel-nav-btn-s-1-prev1"><i
+                                    class="fa fa-angle-left"></i></a>
+                            <a href="#" class="carousel-nav-btn-s-1-next carousel-nav-btn-s-1-next1"><i
+                                    class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="causes-item-carousel owl-carousel owl-theme">
+                        <div class="column">
+                            <div class="causes-block">
+                                <div class="image">
+                                    <img src="assets/images/resource/charity.jpg" alt="">
+                                    <div class="progress-wrap">
+                                        <div class="progress-box">
+                                            <div class="inner-box">
+                                                <div class="graph-outer">
+                                                    <input type="text" class="dial" data-fgColor="#f74f22"
+                                                        data-bgColor="none" data-width="75" data-height="75"
+                                                        data-linecap="normal" value="83">
+                                                    <div class="inner-text count-box"><span class="count-text" data-stop="83"
+                                                            data-speed="2000"></span><span class="count-Parsent">%</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <h4>Education</h4>
+                                            <div class="text">Collecté<span class="crl4"> 500.000 f</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lower-content">
+                                    <h4>Donner pour l'éducation des enfants defavorisés de donakro pour un avenir meilleur</h4>
+                                    <ul>
+                                        <li>Objectif<span>500.000 f</span></li>
+                                        <li>Collecté<span class="crl2">500.000 f</span></li>
+                                        <li>Reste<span class="crl3"> 500.000 <fieldset></fieldset></span></li>
+                                    </ul>
+                                    <a href="#" class="primary_btn s-two donate_button">Dona<i
+                                            class="far fa-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="causes-block">
+                                <div class="image">
+                                    <img src="assets/images/resource/charity-2.jpg" alt="">
+                                    <div class="progress-wrap">
+                                        <div class="progress-box">
+                                            <div class="inner-box">
+                                                <div class="graph-outer">
+                                                    <input type="text" class="dial" data-fgColor="#65c9bb"
+                                                        data-bgColor="none" data-width="75" data-height="75"
+                                                        data-linecap="normal" value="76">
+                                                    <div class="inner-text count-box"><span class="count-text" data-stop="76"
+                                                            data-speed="2000"></span><span class="count-Parsent">%</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <h4>Alimentation</h4>
+                                            <div class="text">Collecté<span class="crl5">1.500.000 f</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lower-content">
+                                    <h4>Aidez à Nourrir les Enfants de l'Orphelinat de Bouake</h4>
+                                    <ul>
+                                        <li>Objectif<span>2.000.000 f</span></li>
+                                        <li>Collecté<span class="crl2">1.500.000 f</span></li>
+                                        <li>Reste<span class="crl3"> 500.000 f</span></li>
+                                    </ul>
+                                    <a href="#" class="primary_btn s-two donate_button">Dona<i
+                                            class="far fa-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="causes-block">
+                                <div class="image">
+                                    <img src="assets/images/resource/charity-3.jpg" alt="">
+                                    <div class="progress-wrap">
+                                        <div class="progress-box">
+                                            <div class="inner-box">
+                                                <div class="graph-outer">
+                                                    <input type="text" class="dial" data-fgColor="#ffac00"
+                                                        data-bgColor="none" data-width="75" data-height="75"
+                                                        data-linecap="normal" value="83">
+                                                    <div class="inner-text count-box"><span class="count-text" data-stop="83"
+                                                            data-speed="2000"></span><span class="count-Parsent">%</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <h4>Eau Potable</h4>
+                                            <div class="text">Collecte<span class="crl6"> 1.500.000 f</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lower-content">
+                                    <h4>Soutenez l'Accès à l'Eau Potable dans les Régions du nord</h4>
+                                    <ul>
+                                        <li>Objectif<span>2.000.000 f</span></li>
+                                        <li>Collecté<span class="crl2">1.500.000 f</span></li>
+                                        <li>Reste<span class="crl3"> 500.000 f</span></li>
+                                    </ul>
+                                    <a href="#" class="primary_btn s-two donate_button">Dona<i
+                                            class="far fa-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="column">
+                            <div class="causes-block">
+                                <div class="image">
+                                    <img src="assets/images/resource/charity-4.jpg" alt="">
+                                    <div class="progress-wrap">
+                                        <div class="progress-box">
+                                            <div class="inner-box">
+                                                <div class="graph-outer">
+                                                    <input type="text" class="dial" data-fgColor="#f74f22"
+                                                        data-bgColor="none" data-width="75" data-height="75"
+                                                        data-linecap="normal" value="75">
+                                                    <div class="inner-text count-box"><span class="count-text" data-stop="75"
+                                                            data-speed="2000"></span><span class="count-Parsent">%</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <h4>Education</h4>
+                                            <div class="text">Raised<span class="crl7"> $256</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lower-content">
+                                    <h4>Raise Hand To The Poor Children Education For Better Future</h4>
+                                    <ul>
+                                        <li>Goal<span>$34562</span></li>
+                                        <li>Raise<span class="crl2">$562</span></li>
+                                        <li>To Go<span class="crl3"> $864</span></li>
+                                    </ul>
+                                    <a href="#" class="primary_btn s-two donate_button">Donation<i
+                                            class="far fa-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                <center>
+                    <a href="/public/causes" class="primary_btn s-two donate_button">Voir toutes les causes<i
+                        class="far fa-heart"></i></a>
+                </center>
+                </div>
+            </section>
+
+
+               <!-- donar section -->
+    <section class="donar">
+        <div class="theme_container">
+            <div class="logo"><img src="assets/images/resource/icon-5.png" alt=""></div>
+            <div class="row no-gutters">
+                <div class="col-lg-6">
+                    <div class="donar-block">
+                        <div class="sub-title mb-20 s-two"><span class="title-sep-left"><img
+                                    src="assets/images/resource/icon-6.png" alt=""></span>Parainer un enfant</div>
+                        <h2 class="sec-title s-two mb-30">Faites briller l'avenir d'un enfant</h2>
+                        <div class="bottom">
+                            {{-- <form class="about-section-two-form">
+                                <div class="about-section-two-input-box">
+                                    <input type="email" placeholder="Votre Email" name="email">
+                                </div>
+                            </form> --}}
+                        </div>
+                        <div class="project-form s-two">
+                            <ul class="donation-amount">
+                                <li class="donation-form-one-price-value" data-dollars='1000'>100 000 F</li>
+                                <li class="donation-form-one-price-value" data-dollars='500'>50 000 F</li>
+                                <li class="donation-form-one-price-value" data-dollars='100'>30 000 F</li>
+                                <li class="donation-form-one-price-value" data-dollars='25'>15 000 F</li>
+                                <li class="other-input"></li>
+                            </ul>
+                            <div class="from-button"><button class="primary_btn-one donate_button">Faire une dona<i
+                                        class="far fa-heart"></i></button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+
+                    <div class="image" style="height: 100%"><img src="assets/images/enf.jpg" style="height:100%" alt=""></div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- section about -->
     <section class="about">
@@ -195,227 +419,9 @@
         </div>
     </section>
 
-    <section class="cta">
-        <div class="bg" style="background-image: url(assets/images/background/map.png);"></div>
-        <div class="theme_container">
-
-            <div class="cta-text text-center mb-40"><span>Des petits</span> Dons <span>pour</span> de Grand
-                <span>Impact</span></div>
-            <div class="text text-center mb-35">contribuer facilement à des causes qui vous tiennent à cœur</div>
-            {{-- <div class="inner-box">
-                <div class="link-btn"><a href="donate.html" class="primary_btn-one">Faire une Dona<i
-                            class="far fa-heart"></i></a></div>
-                <div class="contact-info">
-                    <div class="icon"><i class="flaticon-phone"></i></div>
-                    <div class="contact-number">
-                        <div class="number">Contact <br><a href="tel:+012(345)6789"><span>+225(05) 88364403</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
-        </div>
-    </section>
-
-    <!-- donar section -->
-    <section class="donar">
-        <div class="theme_container">
-            <div class="logo"><img src="assets/images/resource/icon-5.png" alt=""></div>
-            <div class="row no-gutters">
-                <div class="col-lg-6">
-                    <div class="donar-block">
-                        <div class="sub-title mb-20 s-two"><span class="title-sep-left"><img
-                                    src="assets/images/resource/icon-6.png" alt=""></span>Faire un don</div>
-                        <h2 class="sec-title s-two mb-30">Faites briller l'avenir d'un enfant</h2>
-                        <div class="bottom">
-                            {{-- <form class="about-section-two-form">
-                                <div class="about-section-two-input-box">
-                                    <input type="email" placeholder="Votre Email" name="email">
-                                </div>
-                            </form> --}}
-                        </div>
-                        <div class="project-form s-two">
-                            <ul class="donation-amount">
-                                <li class="donation-form-one-price-value" data-dollars='1000'>100 000 F</li>
-                                <li class="donation-form-one-price-value" data-dollars='500'>50 000 F</li>
-                                <li class="donation-form-one-price-value" data-dollars='100'>30 000 F</li>
-                                <li class="donation-form-one-price-value" data-dollars='25'>15 000 F</li>
-                                <li class="other-input"></li>
-                            </ul>
-                            <div class="from-button"><button class="primary_btn-one donate_button">Faire un don<i
-                                        class="far fa-heart"></i></button></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-
-                    <div class="image" style="height: 100%"><img src="assets/images/enf.jpg" style="widh:100%; height:90%" alt=""></div>
-
-                </div>
-            </div>
-        </div>
-    </section>
 
 
-        <!--  Causes Section -->
-        <section class="causes">
-            <div class="theme_container">
-                <div class="title-box">
-                    <div class="sub-title mb-20"><span class="title-sep-left"><img src="assets/images/resource/icon-4.png"
-                                alt=""></span>Causes Populaires</div>
-                    <h2 class="sec-title mb-56">Faites un simple Don <br> et impacter une vie</h2>
-                    <div class="cause-carousel-nav-btn carousel-nav-btn-s-1 owl-nav-s-1">
-                        <a href="#" class="carousel-nav-btn-s-1-prev carousel-nav-btn-s-1-prev1"><i
-                                class="fa fa-angle-left"></i></a>
-                        <a href="#" class="carousel-nav-btn-s-1-next carousel-nav-btn-s-1-next1"><i
-                                class="fa fa-angle-right"></i></a>
-                    </div>
-                </div>
-                <div class="causes-item-carousel owl-carousel owl-theme">
-                    <div class="column">
-                        <div class="causes-block">
-                            <div class="image">
-                                <img src="assets/images/resource/charity.jpg" alt="">
-                                <div class="progress-wrap">
-                                    <div class="progress-box">
-                                        <div class="inner-box">
-                                            <div class="graph-outer">
-                                                <input type="text" class="dial" data-fgColor="#f74f22"
-                                                    data-bgColor="none" data-width="75" data-height="75"
-                                                    data-linecap="normal" value="83">
-                                                <div class="inner-text count-box"><span class="count-text" data-stop="83"
-                                                        data-speed="2000"></span><span class="count-Parsent">%</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <h4>Education</h4>
-                                        <div class="text">Collecté<span class="crl4"> 500.000 f</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4>Donner pour l'éducation des enfants defavorisés de donakro pour un avenir meilleur</h4>
-                                <ul>
-                                    <li>Objectif<span>500.000 f</span></li>
-                                    <li>Collecté<span class="crl2">500.000 f</span></li>
-                                    <li>Reste<span class="crl3"> 500.000 <fieldset></fieldset></span></li>
-                                </ul>
-                                <a href="#" class="primary_btn s-two donate_button">Dona<i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="causes-block">
-                            <div class="image">
-                                <img src="assets/images/resource/charity-2.jpg" alt="">
-                                <div class="progress-wrap">
-                                    <div class="progress-box">
-                                        <div class="inner-box">
-                                            <div class="graph-outer">
-                                                <input type="text" class="dial" data-fgColor="#65c9bb"
-                                                    data-bgColor="none" data-width="75" data-height="75"
-                                                    data-linecap="normal" value="76">
-                                                <div class="inner-text count-box"><span class="count-text" data-stop="76"
-                                                        data-speed="2000"></span><span class="count-Parsent">%</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <h4>Alimentation</h4>
-                                        <div class="text">Collecté<span class="crl5">1.500.000 f</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4>Aidez à Nourrir les Enfants de l'Orphelinat de Bouake</h4>
-                                <ul>
-                                    <li>Objectif<span>2.000.000 f</span></li>
-                                    <li>Collecté<span class="crl2">1.500.000 f</span></li>
-                                    <li>Reste<span class="crl3"> 500.000 f</span></li>
-                                </ul>
-                                <a href="#" class="primary_btn s-two donate_button">Dona<i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="causes-block">
-                            <div class="image">
-                                <img src="assets/images/resource/charity-3.jpg" alt="">
-                                <div class="progress-wrap">
-                                    <div class="progress-box">
-                                        <div class="inner-box">
-                                            <div class="graph-outer">
-                                                <input type="text" class="dial" data-fgColor="#ffac00"
-                                                    data-bgColor="none" data-width="75" data-height="75"
-                                                    data-linecap="normal" value="83">
-                                                <div class="inner-text count-box"><span class="count-text" data-stop="83"
-                                                        data-speed="2000"></span><span class="count-Parsent">%</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <h4>Eau Potable</h4>
-                                        <div class="text">Collecte<span class="crl6"> 1.500.000 f</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4>Soutenez l'Accès à l'Eau Potable dans les Régions du nord</h4>
-                                <ul>
-                                    <li>Objectif<span>2.000.000 f</span></li>
-                                    <li>Collecté<span class="crl2">1.500.000 f</span></li>
-                                    <li>Reste<span class="crl3"> 500.000 f</span></li>
-                                </ul>
-                                <a href="#" class="primary_btn s-two donate_button">Dona<i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="column">
-                        <div class="causes-block">
-                            <div class="image">
-                                <img src="assets/images/resource/charity-4.jpg" alt="">
-                                <div class="progress-wrap">
-                                    <div class="progress-box">
-                                        <div class="inner-box">
-                                            <div class="graph-outer">
-                                                <input type="text" class="dial" data-fgColor="#f74f22"
-                                                    data-bgColor="none" data-width="75" data-height="75"
-                                                    data-linecap="normal" value="75">
-                                                <div class="inner-text count-box"><span class="count-text" data-stop="75"
-                                                        data-speed="2000"></span><span class="count-Parsent">%</span></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="content">
-                                        <h4>Education</h4>
-                                        <div class="text">Raised<span class="crl7"> $256</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="lower-content">
-                                <h4>Raise Hand To The Poor Children Education For Better Future</h4>
-                                <ul>
-                                    <li>Goal<span>$34562</span></li>
-                                    <li>Raise<span class="crl2">$562</span></li>
-                                    <li>To Go<span class="crl3"> $864</span></li>
-                                </ul>
-                                <a href="#" class="primary_btn s-two donate_button">Donation<i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            <center>
-                <a href="/public/causes" class="primary_btn s-two donate_button">Voir toutes les causes<i
-                    class="far fa-heart"></i></a>
-            </center>
-            </div>
-        </section>
 
 
     <!-- features section -->

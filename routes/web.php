@@ -17,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class ,'index']);
 Route::get('/causes', [CauseController::class ,'index']);
+Route::get('/cartographie', [HomeController::class ,'carto']);
