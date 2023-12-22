@@ -18,3 +18,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class ,'index']);
 Route::get('/causes', [CauseController::class ,'index']);
 Route::get('/cartographie', [HomeController::class ,'carto']);
+Route::get('/qr-code', 'QrCodeController@generateQRCode')->name('qr.code.generate');
