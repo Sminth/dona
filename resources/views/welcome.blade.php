@@ -124,7 +124,6 @@
 
                                 <a href="#" class="primary_btn style-seven donate_button">Faire une Dona<i
                                         class="far fa-heart"></i></a>
-
                                     </div>
 
                         </div>
@@ -172,143 +171,50 @@
                         </div>
                     </div>
                     <div class="causes-item-carousel owl-carousel owl-theme">
-                        <div class="column">
-                            <div class="causes-block">
-                                <div class="image">
-                                    <img src="assets/images/resource/charity.jpg" alt="">
-                                    <div class="progress-wrap">
-                                        <div class="progress-box">
-                                            <div class="inner-box">
-                                                <div class="graph-outer">
-                                                    <input type="text" class="dial" data-fgColor="#f74f22"
-                                                        data-bgColor="none" data-width="75" data-height="75"
-                                                        data-linecap="normal" value="83">
-                                                    <div class="inner-text count-box"><span class="count-text" data-stop="83"
-                                                            data-speed="2000"></span><span class="count-Parsent">%</span></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="content">
-                                            <h4>Education</h4>
-                                            <div class="text">Collecté<span class="crl4"> 500.000 f</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="lower-content">
-                                    <h4>Donner pour l'éducation des enfants defavorisés de donakro pour un avenir meilleur</h4>
-                                    <ul>
-                                        <li>Objectif<span>500.000 f</span></li>
-                                        <li>Collecté<span class="crl2">500.000 f</span></li>
-                                        <li>Reste<span class="crl3"> 500.000 <fieldset></fieldset></span></li>
-                                    </ul>
-                                    <a href="#" class="primary_btn s-two donate_button">Dona<i
-                                            class="far fa-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="causes-block">
-                                <div class="image">
-                                    <img src="assets/images/resource/charity-2.jpg" alt="">
-                                    <div class="progress-wrap">
-                                        <div class="progress-box">
-                                            <div class="inner-box">
-                                                <div class="graph-outer">
-                                                    <input type="text" class="dial" data-fgColor="#65c9bb"
-                                                        data-bgColor="none" data-width="75" data-height="75"
-                                                        data-linecap="normal" value="76">
-                                                    <div class="inner-text count-box"><span class="count-text" data-stop="76"
-                                                            data-speed="2000"></span><span class="count-Parsent">%</span></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="content">
-                                            <h4>Alimentation</h4>
-                                            <div class="text">Collecté<span class="crl5">1.500.000 f</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="lower-content">
-                                    <h4>Aidez à Nourrir les Enfants de l'Orphelinat de Bouake</h4>
-                                    <ul>
-                                        <li>Objectif<span>2.000.000 f</span></li>
-                                        <li>Collecté<span class="crl2">1.500.000 f</span></li>
-                                        <li>Reste<span class="crl3"> 500.000 f</span></li>
-                                    </ul>
-                                    <a href="#" class="primary_btn s-two donate_button">Dona<i
-                                            class="far fa-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <div class="causes-block">
-                                <div class="image">
-                                    <img src="assets/images/resource/charity-3.jpg" alt="">
-                                    <div class="progress-wrap">
-                                        <div class="progress-box">
-                                            <div class="inner-box">
-                                                <div class="graph-outer">
-                                                    <input type="text" class="dial" data-fgColor="#ffac00"
-                                                        data-bgColor="none" data-width="75" data-height="75"
-                                                        data-linecap="normal" value="83">
-                                                    <div class="inner-text count-box"><span class="count-text" data-stop="83"
-                                                            data-speed="2000"></span><span class="count-Parsent">%</span></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="content">
-                                            <h4>Eau Potable</h4>
-                                            <div class="text">Collecte<span class="crl6"> 1.500.000 f</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="lower-content">
-                                    <h4>Soutenez l'Accès à l'Eau Potable dans les Régions du nord</h4>
-                                    <ul>
-                                        <li>Objectif<span>2.000.000 f</span></li>
-                                        <li>Collecté<span class="crl2">1.500.000 f</span></li>
-                                        <li>Reste<span class="crl3"> 500.000 f</span></li>
-                                    </ul>
-                                    <a href="#" class="primary_btn s-two donate_button">Dona<i
-                                            class="far fa-heart"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                        {{-- @dd($causes) --}}
+                        @foreach ($causes as $cause)
+                        {{-- @dd($cause) --}}
 
                         <div class="column">
                             <div class="causes-block">
                                 <div class="image">
-                                    <img src="assets/images/resource/charity-4.jpg" alt="">
+                                    <img style="height: 310px" src="storage/{{$cause->photo}}" alt="">
                                     <div class="progress-wrap">
                                         <div class="progress-box">
                                             <div class="inner-box">
                                                 <div class="graph-outer">
                                                     <input type="text" class="dial" data-fgColor="#f74f22"
                                                         data-bgColor="none" data-width="75" data-height="75"
-                                                        data-linecap="normal" value="75">
-                                                    <div class="inner-text count-box"><span class="count-text" data-stop="75"
+                                                        data-linecap="normal" value="{{(intVal($cause->collecte)/intVal($cause->objectif)*100)}}">
+                                                    <div class="inner-text count-box"><span class="count-text" data-stop="{{(intVal($cause->collecte)/intVal($cause->objectif)*100)}}"
                                                             data-speed="2000"></span><span class="count-Parsent">%</span></div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="content">
-                                            <h4>Education</h4>
-                                            <div class="text">Raised<span class="crl7"> $256</span></div>
+                                            <h4>{{$cause->categories->libelle}}</h4>
+
+                                            <div class="text">Collecté<span class="crl4"> {{intVal($cause->collecte)}} f</span></div>
                                         </div>
                                     </div>
+                                    {{-- <img src="storage/{{$cause->organisations->logo}}" style="width: 10px" alt=""> --}}
+                                    <strong style="color: black" >{{$cause->organisations->nom}}</strong>
                                 </div>
                                 <div class="lower-content">
-                                    <h4>Raise Hand To The Poor Children Education For Better Future</h4>
+                                    <h4>{{$cause->libelle}}</h4>
                                     <ul>
-                                        <li>Goal<span>$34562</span></li>
-                                        <li>Raise<span class="crl2">$562</span></li>
-                                        <li>To Go<span class="crl3"> $864</span></li>
+                                        <li>Objectif<span>{{$cause->objectif}} f</span></li>
+                                        <li>Collecté<span class="crl2">{{$cause->collecte??0}} f</span></li>
+                                        <li>Reste<span class="crl3"> {{intVal($cause->objectif)-intVal($cause->collecte)}} f <fieldset></fieldset></span></li>
                                     </ul>
-                                    <a href="#" class="primary_btn s-two donate_button">Donation<i
-                                            class="far fa-heart"></i></a>
+                                    <center><a href="#" class="primary_btn s-two donate_button">Dona<i
+                                        class="far fa-heart"></i></a></center>
                                 </div>
                             </div>
                         </div>
+
+                        @endforeach
+
 
                     </div>
                 <center>
@@ -397,7 +303,7 @@
                             <ul>
                                 <li><i class="fas fa-check"></i>Dons pour l'Éducation</li>
                                 <li><i class="fas fa-check"></i>Dons pour l'Alimentation </li>
-                                <li><i class="fas fa-check"></i>Dons p soins Médicaux</li>
+                                <li><i class="fas fa-check"></i>Dons soins Médicaux</li>
                                 <li><i class="fas fa-check"></i>Et pour bien d'autres...</li>
                             </ul>
                         </div>
