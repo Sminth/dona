@@ -14,6 +14,7 @@
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
         "orangehill/iseed": "^3.0",
+        "patricpoba/mtn-momo-api-php": "^0.2.3",
         "simplesoftwareio/simple-qrcode": "^4.2"
     },
     "require-dev": {

@@ -94,10 +94,12 @@
                             </h6>
                             <h2 class="banner-slider-title mb-30">Faites <br> parler votre <br>Coeur</h2>
                             <div class="banner-slde-btn">
-                                <button class="buttonc donate_button">
-                                    Faire une Dona
-                                    <svg height="32" width="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0H24V24H0z" fill="none"></path><path d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z"></path></svg>
-                                  </button>
+                                <a href="/causes">
+                                    <button class="buttonc ">
+                                        Faire une Dona
+                                        <svg height="32" width="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0H24V24H0z" fill="none"></path><path d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z"></path></svg>
+                                      </button>
+                                </a>
 
                                 {{-- <a href="donate.html" class="primary_btn style-seven">Faire une
                                     Don<i class="far fa-heart"></i></a> --}}
@@ -122,7 +124,7 @@
                                 Faites briller l'avenir  <br>d'un enfant</h2>
                             <div class="banner-slider-btn">
 
-                                <a href="#" class="primary_btn style-seven donate_button">Faire une Dona<i
+                                <a href="/causes" class="primary_btn style-seven ">Faire une Dona<i
                                         class="far fa-heart"></i></a>
                                     </div>
 
@@ -138,8 +140,8 @@
         <div class="bg" style="background-image: url(assets/images/background/map.png);"></div>
         <div class="theme_container">
 
-            <div class="cta-text text-center mb-40"><span>Des petits</span> Dons <span>pour</span> de Grand
-                <span>Impact</span></div>
+            <div class="cta-text text-center mb-40"><span>Des petits</span> Dons <span>pour</span> de Grands
+                <span>Impacts</span></div>
             <div class="text text-center mb-35">contribuer facilement à des causes qui vous tiennent à cœur</div>
             <div class="inner-box">
                 <div class="link-btn"><a href="causes" class="primary_btn-one">Voir toutes les causes<i
@@ -178,7 +180,9 @@
                         <div class="column">
                             <div class="causes-block">
                                 <div class="image">
-                                    <img style="height: 310px" src="storage/{{$cause->photo}}" alt="">
+                                    <a href="/causes/{{$cause->id}}">
+                                        <img style="height: 310px" src="storage/{{$cause->photo}}" alt="">
+                                    </a>
                                     <div class="progress-wrap">
                                         <div class="progress-box">
                                             <div class="inner-box">
@@ -201,13 +205,13 @@
                                     <strong style="color: black" >{{$cause->organisations->nom}}</strong>
                                 </div>
                                 <div class="lower-content">
-                                    <h4>{{$cause->libelle}}</h4>
+                                   <a href="/causes/{{$cause->id}}"> <h4>{{$cause->libelle}}</h4></a>
                                     <ul>
                                         <li>Objectif<span>{{$cause->objectif}} f</span></li>
                                         <li>Collecté<span class="crl2">{{$cause->collecte??0}} f</span></li>
                                         <li>Reste<span class="crl3"> {{intVal($cause->objectif)-intVal($cause->collecte)}} f <fieldset></fieldset></span></li>
                                     </ul>
-                                    <center><a href="#" class="primary_btn s-two donate_button">Dona<i
+                                    <center><a style="cursor: pointer" onclick="show({{$cause}})"  class="primary_btn s-two  menu-bar sidemenu-nav-toggler">Dona<i
                                         class="far fa-heart"></i></a></center>
                                 </div>
                             </div>
@@ -218,8 +222,9 @@
 
                     </div>
                 <center>
-                    <a href="/public/causes" class="primary_btn s-two donate_button">Voir toutes les causes<i
+                    <a href="/causes" class="primary_btn s-two ">Voir toutes les causes<i
                         class="far fa-heart"></i></a>
+                        {{-- donate_button --}}
                 </center>
                 </div>
             </section>
@@ -250,14 +255,14 @@
                                 <li class="donation-form-one-price-value" data-dollars='25'>15 000 F</li>
                                 <li class="other-input"></li>
                             </ul>
-                            <div class="from-button"><button class="primary_btn-one donate_button">Faire une dona<i
+                            <div class="from-button"><button onclick="alert('parrainage pas encore disponible')" class="primary_btn-one donate_button">Faire une dona<i
                                         class="far fa-heart"></i></button></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
 
-                    <div class="image" style="height: 100%"><img src="assets/images/enf.jpg" style="height:100%" alt=""></div>
+                    <div class="image" style="height: 100%"><img src="assets/images/noel1.jpg" style="height:443px;width:100%" alt=""></div>
 
                 </div>
             </div>
@@ -309,7 +314,7 @@
                         </div>
                         <div class="inner-box">
                             <div class="link-btn">
-                                <a href="/public/causes" class="primary_btn">Voir les causes<i class="far fa-heart"></i></a>
+                                <a href="/causes" class="primary_btn">Voir les causes<i class="far fa-heart"></i></a>
                             </div>
                             <div class="contact-info">
                                 <div class="icon"><i class="flaticon-phone"></i></div>
@@ -467,19 +472,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                {{-- <div class="testimonial-block">
-                                    <div class="icon"><i class="flaticon-quote"></i></div>
-                                    <div class="text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                        accusantium dolorem laudantiums totam aperiam eaqupsa inventore </div>
-                                    <div class="author-info">
-                                        <div class="author-thumb"><img src="assets/images/resource/test.png"
-                                                alt=""></div>
-                                        <div class="author-content">
-                                            <div class="name">Steven M. Robinson</div>
-                                            <div class="designation">Business Manager</div>
-                                        </div>
-                                    </div>
-                                </div> --}}
+
 
                             </div>
                         </div>
@@ -557,93 +550,4 @@
     </section>
 
 
-    <!-- start footer conter section -->
-    <div class="section-footer-counter-section">
-        <div class="theme_container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="footer-counter-block">
-                        <div class="count-outer count-box">
-                            <span class="count-text" data-speed="3000" data-stop="5000000">0</span><span
-                                class="plus"> F+</span>
-                            <span class="crl3">
-                                Levé pour un don</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="donation-form-one-form-wrap s-two">
-                        <ul class="donation-form-one-form-wrap-ul donate_form_amount_wrap">
-                            <li class="donation-form-one-price-value" data-dollars='1000'>100 000 F</li>
-                            <li class="donation-form-one-price-value" data-dollars='500'>50 000 F</li>
-                            <li class="donation-form-one-price-value" data-dollars='100'>30 000 F</li>
-                            <li class="donation-form-one-price-value" data-dollars='25'>15 000 F</li>
-                            {{-- <li class="donation-form-one-price-value" data-dollars='25'>Autre</li> --}}
-
-                            <li class="other-input"></li>
-                        </ul>
-                        <div class="donation-form-one-submit-btn"><button class="primary_btn-one donate_button"
-                                type="submit">Donation<i class="far fa-heart"></i></button></div>
-                    </div>
-                    <div class="donate-fomr-popup donate-form-s-one">
-                        <div class="donate-fomr-popup-outer">
-                            <div class="donate-fomr-popup-inner">
-                                <div class="donate-fomr-popup-close"><i class="fas fa-times"></i></div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title">Informations Personnelles</h3>
-                                    </div>
-                                    <div class="panel-body">
-                                        <form id="formulaire-donation">
-                                            <div class="form-group">
-                                                <input id="nom_complet" name="nom_complet" type="text" placeholder="Nom complet" class="form-control" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <input id="email" name="email" type="email" placeholder="Email (Facultatif)" class="form-control">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="checkbox" id="rester_anonyme" name="rester_anonyme">
-                                                <label for="rester_anonyme">Rester Anonyme</label>
-                                            </div>
-                                            <div class="form-group">
-                                                <input id="numero_momo" name="numero_momo" type="text" placeholder="Numéro Mobile Money" class="form-control" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <input id="montant_don" name="montant_don" type="number" placeholder="Montant du don" class="form-control" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="checkbox" id="suivre_actions" name="suivre_actions">
-                                                <label for="suivre_actions">Suivre les actions relatives à ce don</label>
-                                            </div>
-                                            <button type="button" onclick="
-                                              var form = document.getElementById('formulaire-donation');
-                                              var nomComplet = form.nom_complet.value;
-                                              var email = form.email.value;
-                                              var resterAnonyme = form.rester_anonyme.checked;
-                                              var numeroMomo = form.numero_momo.value;
-                                              var montantDon = form.montant_don.value;
-
-                                              if (!resterAnonyme && (!nomComplet || !email)) {
-                                                alert('Veuillez entrer le nom complet et l\'email ou choisir de rester anonyme.');
-                                                return;
-                                              }
-
-                                              if (!numeroMomo || !montantDon) {
-                                                alert('Veuillez entrer le numéro Mobile Money et le montant du don.');
-                                                return;
-                                              }
-
-                                              alert('Paiement en cours de traitement...');  // Remplacer par votre propre logique
-                                            ">Soumettre</button>
-                                        </form>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 @endsection

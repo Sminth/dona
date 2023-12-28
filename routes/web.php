@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CauseController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\QrCodeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,5 +18,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class ,'index']);
 Route::get('/causes', [CauseController::class ,'index']);
+Route::get('/causes/{cause}', [CauseController::class ,'show']);
 Route::get('/cartographie', [HomeController::class ,'carto']);
-Route::get('/qr-code', 'QrCodeController@generateQRCode')->name('qr.code.generate');
+// Route::get('/qr', [QrCodeController::class,'generateQRCode'])->name('qr.code.generate');
+
+Route::post('/smspayer_meth', [CauseController::class, 'mtn'])->name("paye");
+

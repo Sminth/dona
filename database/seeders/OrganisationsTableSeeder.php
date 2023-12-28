@@ -53,7 +53,7 @@ class OrganisationsTableSeeder extends Seeder
             array (
                 'id' => 3,
                 'nom' => 'Dona',
-                'logo' => NULL,
+                'logo' => 'twemoji12-2764svg-W2Kl.png',
                 'responsable' => NULL,
                 'description' => '<p>Doan est une organisation qui vise à centraliser tous les appels aux dons d\'organisations
 vérifiées comme des associations, des ONG etc, pour permettre&nbsp;aux
@@ -64,7 +64,7 @@ utilisateurs de faire des dons en toute confiance via MTN Mobile Money<br></p>',
                 'email' => NULL,
                 'whatsapp' => NULL,
                 'created_at' => '2023-12-21 13:39:50',
-                'updated_at' => '2023-12-21 13:39:50',
+                'updated_at' => '2023-12-28 14:34:49',
             ),
         ));
         

@@ -4,14 +4,22 @@ namespace App\Http\Controllers;
 
 use App\Models\Causes;
 use Illuminate\Http\Request;
+use PatricPoba\MtnMomo\MtnConfig;
+use PatricPoba\MtnMomo\MtnCollection;
 
+
+
+
+use Bmatovu\MtnMomo\Products\Collection;
 class HomeController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
+
         $causes = Causes::take(6)->orderBy("created_at","desc")->get();
         return view("welcome", compact("causes"));
     }
