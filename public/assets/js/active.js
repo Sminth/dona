@@ -3,7 +3,7 @@
     "use strict";
 
 
- 
+
 
     $('select').niceSelect();
 
@@ -186,7 +186,7 @@
                 $(this).addClass('current');
             }
         });
-        // if no file name return 
+        // if no file name return
         if ('' == FileName) {
             selector.find('li').eq(0).addClass('current');
         }
@@ -195,7 +195,7 @@
 
 
 
-    // dynamic current class        
+    // dynamic current class
     let mainNavUL = $('.main-menu').find('.navigation');
     dynamicCurrentMenuClass(mainNavUL);
 
@@ -301,7 +301,6 @@
             var $t = $(this),
                 n = $t.find(".count-text").attr("data-stop"),
                 r = parseInt($t.find(".count-text").attr("data-speed"), 10);
-
             if (!$t.hasClass("counted")) {
                 $t.addClass("counted");
                 $({
@@ -315,7 +314,8 @@
                         $t.find(".count-text").text(Math.floor(this.countNum));
                     },
                     complete: function() {
-                        $t.find(".count-text").text(this.countNum);
+                        if(n==100) $t.find(".count-text").text("ok");
+                        else $t.find(".count-text").text(this.countNum);
                     }
                 });
             }
@@ -374,7 +374,7 @@
                     easing: 'linear'
                 }
             });
-            // Isotope Filter 
+            // Isotope Filter
             $filter.find('li').on('click', function() {
                 var selector = $(this).attr('data-filter');
                 try {
@@ -696,7 +696,7 @@
     }
 
     if ($('.causes-item-carousel').length) {
-        
+
         var myCarousel1 = $('.causes-item-carousel');
         var nextBtn1 = $('.carousel-nav-btn-s-1-next1');
         var prevBtn1 = $('.carousel-nav-btn-s-1-prev1');
@@ -725,7 +725,7 @@
                 }
             }
         });
-        
+
         nextBtn1.on('click', function () {
             myCarousel1.trigger('next.owl.carousel', [300]);
             return false;
@@ -737,7 +737,7 @@
     }
 
     if ($('.causes-item-carousel2').length) {
-        
+
         var myCarousel2 = $('.causes-item-carousel2');
         var nextBtn2 = $('.carousel-nav-btn-s-1-next2');
         var prevBtn2 = $('.carousel-nav-btn-s-1-prev2');
@@ -766,7 +766,7 @@
                 }
             }
         });
-        
+
         nextBtn2.on('click', function () {
             myCarousel2.trigger('next.owl.carousel', [300]);
             return false;
@@ -797,7 +797,7 @@
                 jQuery('.back-to-top').fadeOut(duration);
             }
         });
-        
+
         jQuery('.back-to-top').on("click", function(){
             event.preventDefault();
             jQuery('html, body').animate({scrollTop: 0}, duration);
@@ -830,19 +830,19 @@
         $(this).filter('.donation-form-one-price-value').addClass("active-price-value");
         var value = $(this).data('impact');
         $(this).closest('div').find('p').text("" + value);
-        $('.other-input').find('input').val('');  
+        $('.other-input').find('input').val('');
     });
-        
+
     $('.donate_button').on('click', function() {
         var dollar;
         var input = $('.other-input').find('input').val();
         if ( !input ) {
         dollar = $('.active-price-value').data('dollars');
         } else if ( $.trim(input) === '' || isNaN(input)) {
-        // empty space leaves value = 'undefined'. 
+        // empty space leaves value = 'undefined'.
         // Have to fix $.trim(input) == '' above so that it works.
         console.log('Yes');
-        dollar = "Please enter a number."; 
+        dollar = "Please enter a number.";
         } else {
         dollar = input;
         }
@@ -851,7 +851,7 @@
 
     $('.donate_button').on('click', function() {
         $('.donate-fomr-popup').fadeIn(300);
-    }); 
+    });
     $('.donate-fomr-popup-close').on('click', function() {
         $('.donate-fomr-popup').fadeOut(300);
     });

@@ -45,7 +45,7 @@ class Categories extends Model
     */
     public function causes()
     {
-        return $this->hasMany('App\Models\Causes', 'id_org');
+        return $this->hasMany('App\Models\Causes', 'id_cate');
     }
 
     /*

@@ -1,0 +1,24 @@
+runtime: php74  # Utilisez la version PHP appropriée
+
+env_variables:
+  APP_KEY: YOUR_APP_KEY  # Remplacez par votre clé d'application
+  APP_STORAGE: /tmp
+  VIEW_COMPILED_PATH: /tmp
+  CACHE_DRIVER: database
+  SESSION_DRIVER: database
+  ## Ajoutez d'autres variables d'environnement nécessaires
+
+handlers:
+- url: /(.*\.(gif|png|jpg|css|js))$
+  static_files: public/\1
+  upload: public/.*\.(gif|png|jpg|css|js)$
+  application_readable: true
+
+- url: /.*
+  script: auto
+
+- url: /storage
+  static_dir: storage/app/public
+  secure: always
+  http_headers:
+    X-Frame-Options: "SAMEORIGIN"

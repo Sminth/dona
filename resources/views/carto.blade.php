@@ -1,21 +1,14 @@
 @extends('layouts.app')
 
-@section('extra-css')
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet" />
-    <link rel="stylesheet" href="{{asset('assets/css/map.css')}}">
-
-    <style>
-        footer {
-            display: none;
-        }
-        @media (max-width:992px) {
-            #legend {
-            display: none;
-        }
-}
-    </style>
-@endsection
 @section('content')
+<link href="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css" rel="stylesheet">
+<link href="{{asset('assets/css/map.css')}}" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js"></script>
+<style>
+
+</style>
+
+<div style="position: relative;height:75vh">
     <div id="map"></div>
     <div id="sidebar" class="shadow-lg"></div>
 
@@ -30,26 +23,20 @@
             <canvas id="participationChart"></canvas>
         </div>
 
-        <div class="legend">
+        {{-- <div class="legend">
             <p class="text-center" style="color: red">LEGENDE</p>
             <div class="legend-item" data-type="meeting">
-                <img src="map/handshake.png" class="legend-icon" alt="meeting" />
-                <span>Meeting</span>
+                <img src="assets/images/coeur.png" class="legend-icon" alt="meeting" />
+                <span>Appel de dons</span>
             </div>
-            <div class="legend-item" data-type="debat">
-                <img src="map/flip-chart.png" class="legend-icon" alt="debat" />
-                <span>Débat/Rassemblement</span>
-            </div>
-            {{-- <span class="text-center" style="color: red; font-size:11px">** cliquez sur un élément de la legende pour filtrer les événements sur la carte</span> --}}
 
-        </div>
+            <span class="text-center" style="color: red; font-size:11px">** cliquez sur un élément de la legende pour filtrer les événements sur la carte</span>
+
+        </div> --}}
     </div>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{asset('assets/js/map.js')}}"></script>
 
-    <script src="assets/js/map.js"></script>
-@endsection
 
-@section('extra-js')
 @endsection

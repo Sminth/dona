@@ -8364,9 +8364,9 @@ section.nature-section .theme_container {
 .price-value {
     border: 2px solid rgb(255 255 255 / 15%);
     display: inline !important;
-    width: 80px  !important;
+    width: 70px  !important;
     height: 50px  !important;
-    padding: 10px 15px !important;
+    padding: 10px 13px !important;
     color: #fff;
     cursor: pointer;
     -webkit-transition: 0.5s;

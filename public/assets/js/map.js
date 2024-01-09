@@ -1,15 +1,10 @@
+// Configuration de l'API Mapbox
 mapboxgl.accessToken =
   "pk.eyJ1Ijoic21pbnRoIiwiYSI6ImNsa3RzOTYzNTAxOTQzcXBlOXQwMTY5dDUifQ.mg4Z24cW-JcY3cviHmZa1w";
 
 
-//   const map = new mapboxgl.Map({
-//     container: "map",
-//     style: "mapbox://styles/mapbox/streets-v11",
-//     center: [-3.9828, 5.3779], // Coordonnées d'Abidjan
-//     zoom: 10, // Zoom sur Abidjan
-//   });
-// Définir un niveau de zoom par défaut
-let defaultZoom = 10; // pour les écrans plus grands
+
+  let defaultZoom = 10; // pour les écrans plus grands
 let defaultCoord = [-3.8828, 5.3779]; // Coordonnées d'Abidjan
 
 // Si la largeur de l'écran est inférieure à 768 pixels (typiquement un mobile)
@@ -25,7 +20,7 @@ const map = new mapboxgl.Map({
     zoom: 4, // Zoom initial plus éloigné
   });
 
-map.on("load", function () {
+  map.on("load", function () {
     map.flyTo({
         center: defaultCoord,
         zoom: defaultZoom, // Niveau de zoom souhaité pour Abidjan
@@ -34,20 +29,15 @@ map.on("load", function () {
         easing: function(t) { return t * (2 - t); }// Fonction d'atténuation pour l'animation
       });
 
-  // Ajout des images PNG pour les icônes
-  map.loadImage("map/megaphone.png", function (error, image) {
-    if (error) throw error;
-    map.addImage("megaphone", image);
-  });
-
-  map.loadImage("map/handshake.png", function (error, image) {
-    if (error) throw error;
-    map.addImage("icon-meeting", image);
-  });
-  map.loadImage("map/flip-chart.png", function (error, image) {
-    if (error) throw error;
-    map.addImage("icon-debat", image);
-  });
+    // Ajout des images PNG pour les icônes
+    map.loadImage("assets/images/coeur.png", function (error, image) {
+        if (error) throw error;
+        map.addImage("icon-coeur", image);
+    });
+    map.loadImage("assets/images/lgo.png", function (error, image) {
+        if (error) throw error;
+        map.addImage("icon-dona", image);
+    });
 
   // Ajout d'une source de données pour les événements
   map.addSource("events", {
@@ -62,12 +52,12 @@ map.on("load", function () {
             coordinates: [-3.9573, 5.3560], // Cocody
           },
           properties: {
-            title: "Débat présidentiel",
-            description:
-              "Date: 2023-09-15, Heure: 19h00, Participants: Candidat A, Candidat B",
-            icon: "icon-debat",
-            type: "debat",
-            video: "https://www.youtube.com/embed/qNZTQWQdtsQ", // Lien YouTube aléatoire pour le test
+            title: "Arbre de Noël pour les enfants du quartier du tribunal de commerce",
+            objectif:"500 000",
+            reste : "0",
+            pcollecte : "100",
+            icon: "icon-coeur",
+            image: "storage/sri-slPl.jpg",
           },
         },
         {
@@ -78,141 +68,69 @@ map.on("load", function () {
           },
           properties: {
             title: "Meeting du candidat Gbehu",
-            description: "Le candidat des jeunes de yopougon organise un meeting à ne pas manqué.",
-            icon: "icon-meeting",
-            type: "meeting",
+            objectif:"500 000",
+            reste : "0",
+            pcollecte : "100",
+            icon: "icon-coeur",
             video: "https://www.youtube.com/embed/tgbNymZ7vqY", // Autre lien YouTube aléatoire pour le test
           },
         },
         {
-          type: "Feature",
-          geometry: {
-            type: "Point",
-            coordinates: [-4.0209, 5.4145], // Abobo
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates:  [-4.0209, 5.4145], // Abobo
+            },
+            properties: {
+              title: "Arbre de Noël pour les enfants du quartier du tribunal de commerce",
+              objectif:"500 000",
+              reste : "0",
+              pcollecte : "100",
+              icon: "icon-coeur",
+              image: "storage/sri-slPl.jpg",
+            },
           },
-          properties: {
-            title: "Meeting du candidat Hubertin",
-            description: "Un grand rassemblement à eu lieu pour le meeting du candidat.",
-            icon: "icon-meeting",
-            type: "meeting",
-          },
-        },
-        // Ajout de nouveaux événements
+
       ],
     },
   });
 
-//   map.addSource("communes", {
-//     type: "geojson",
-//     data: "map/commune.geojson", // Remplacez ceci par le chemin vers votre fichier GeoJSON
-//   });
-
-
-
-  map.addLayer({
-    'id': 'communes-layer',
-    'type': 'fill',
-    'source': 'communes', // Assurez-vous que c'est le nom de votre source GeoJSON
-    'layout': {},
-    'paint': {
-        'fill-color': [
-            'match',
-            ['get', 'name'], // Récupère la valeur de l'attribut "name"
-            'Marcory', '#FFF05F', // Si "name" est "Commune1", utilisez la couleur rouge
-            'Cocody', '#EA4E1B', // Si "name" est "Commune2", utilisez la couleur verte
-            'Abobo', '#EDCA86', // Si "name" est "Commune3", utilisez la couleur bleue
-            'Plateau', '#F9B234', // Si "name" est "Commune1", utilisez la couleur rouge
-            'Adjamé', '#F29F29', // Si "name" est "Commune2", utilisez la couleur verte
-            'Yopougon', '#E5534C',
-            'Attécoubé', '#FF6F6F',
-            'Port-Bouët', '#FF5B15',
-            'Bingerville', '#642BFF',
-            'Anyama', '#007407',
-            'Songon', '#FF7200',
-            '#ccc' // Couleur par défaut si aucune commune ne correspond
-        ],
-        // "fill-opacity": 0.1,
-    }
-});
-
-map.addLayer({
-    id: "communes-label",
-    type: "symbol",
-    source: "communes", // Utilisez la même source que votre couche de type fill
-    layout: {
-      "text-field": "{name}", // Utilisez la propriété "name" de votre source GeoJSON
-      "text-font": ["Open Sans Bold", "Arial Unicode MS Bold"],
-      "text-size": 12
-    },
-    paint: {
-      "text-color": "#000", // Couleur du texte
-      "text-halo-color": "#fff", // Couleur de l'halo autour du texte
-      "text-halo-width": 1 // Largeur de l'halo
-    }
-  });
   map.addLayer({
     id: "events-point",
     type: "symbol",
     source: "events",
     layout: {
-      "icon-image": "{icon}",
-      "icon-size": 1,
-      "icon-allow-overlap": true,
+        "icon-image": "{icon}",
+        "icon-size": 0.01,
+        "text-field": "{title}",
+        "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+        "text-offset": [0, 0.6],
+        "text-anchor": "top",
+        "text-size": 15
+    //   "icon-allow-overlap": true,
     },
   });
-  // Animation pour que les icônes "sautent"
-  let start;
-  function bounceMarker(timestamp) {
-    if (!start) start = timestamp;
-    const progress = timestamp - start;
-    const bounceHeight = 10; // hauteur du saut en pixels
-    const bounceSpeed = 300; // vitesse de l'animation en millisecondes
-    const bounce = Math.abs(Math.sin(progress / bounceSpeed) * bounceHeight);
-    map.setPaintProperty("events-point", "icon-translate", [0, -bounce]);
-    if (progress < bounceSpeed * Math.PI) {
-      requestAnimationFrame(bounceMarker);
-    } else {
-      start = undefined;
-      requestAnimationFrame(bounceMarker);
+
+    // Animation pour que les icônes "sautent"
+    let start;
+    function bounceMarker(timestamp) {
+      if (!start) start = timestamp;
+      const progress = timestamp - start;
+      const bounceHeight = 10; // hauteur du saut en pixels
+      const bounceSpeed = 300; // vitesse de l'animation en millisecondes
+      const bounce = Math.abs(Math.sin(progress / bounceSpeed) * bounceHeight);
+      map.setPaintProperty("events-point", "icon-translate", [0, -bounce]);
+      if (progress < bounceSpeed * Math.PI) {
+        requestAnimationFrame(bounceMarker);
+      } else {
+        start = undefined;
+        requestAnimationFrame(bounceMarker);
+      }
     }
-  }
-  requestAnimationFrame(bounceMarker);
+    requestAnimationFrame(bounceMarker);
 
   let activePopup = null; // Variable pour stocker le popup actif
-// Cette fonction est un exemple. Vous devrez la remplir avec les détails réels de chaque commune.
-function getCommuneDetails(name) {
-    switch(name) {
-        case 'cocody':
-            return `
-                <h2>Cocody</h2>
-                <p>Profil des candidats, promesses électorales, etc.</p>
-            `;
-        case 'guiglo':
-            return `
-                <h2>Guiglo</h2>
-                <p>Profil des candidats, promesses électorales, etc.</p>
-            `;
-        // ... (autres communes)
-        default:
-            return `
-            <span id="close-sidebar" style="cursor: pointer; position: absolute; right: 10px; top: 10px;"><i class="fa fa-times"></i></span>
-            <h2>${name}</h2>
-            <p>Profil des candidats, promesses électorales</p>`;
-    }
-}
-  map.on('click', 'communes-layer', function(e) {
-    const communeName = e.features[0].properties.name; // Supposons que chaque commune ait une propriété "name"
-    const communeDetails = getCommuneDetails(communeName); // Cette fonction doit récupérer les détails de la commune
 
-    const sidebar = document.getElementById('sidebar');
-    sidebar.innerHTML = communeDetails;
-    sidebar.classList.add('open');
-    document
-      .getElementById("close-sidebar")
-      .addEventListener("click", function () {
-        sidebar.classList.remove("open");
-      });
-});
 
   // Gestionnaire d'événements pour afficher un popup lors du survol d'un événement
   map.on("mouseenter", "events-point", function (e) {
@@ -224,10 +142,8 @@ function getCommuneDetails(name) {
       popupContent += `<p>Il y a ${e.features.length} événements à cet endroit :</p>`;
       e.features.forEach((feature) => {
         const title = feature.properties.title;
-        const imageUrl =
-          feature.properties.type === "meeting"
-            ? "icon-meeting.png"
-            : "icon-debat.png";
+        const imageUrl = e.features[0].properties.image;
+
         popupContent += `
                     <div class="row">
                         <img src="${imageUrl}" width="20" alt="${title}" />
@@ -237,26 +153,34 @@ function getCommuneDetails(name) {
       });
     } else {
       const title = e.features[0].properties.title;
-      const description = e.features[0].properties.description;
+      const objectif = e.features[0].properties.objectif;
+      const reste = e.features[0].properties.reste;
+      const pcollecte = e.features[0].properties.pcollecte;
       const videoUrl = e.features[0].properties.video;
+      const imageUrl = e.features[0].properties.image;
 
       if (videoUrl) {
         popupContent += `
-                    <iframe width="200" height="150" src="${videoUrl}?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <h3>${title}</h3>
-                    <p>${description}</p>
-                `;
+                    <iframe width="200" height="150" src="${videoUrl}?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
       } else {
-        const imageUrl =
-          e.features[0].properties.type === "meeting"
-            ? "icon-meeting.png"
-            : "icon-debat.png";
         popupContent += `
-                    <img src="${imageUrl}" width="50" alt="${title}" />
-                    <h3>${title}</h3>
-                    <p>${description}</p>
-                `;
+                    <img src="${imageUrl}" width="100%" alt="${title}" />`;
       }
+      popupContent += `
+                    <h6>${title}</h6>
+                    <div class="cou">
+                    <div style="display:flex;width:100%">
+                    <p>Objectif: ${objectif} f</p>
+                    <p style="text-aligh:right">&nbsp;&nbsp;&nbsp;reste: ${reste} f</p>
+                    </div>
+                    <div style="height:5px;width:100%;border:1px solid #eee">
+                    <div style="height:5px;width:${pcollecte}%;background:#FF7200"></div>
+                    </div>
+                    <p style="text-align:right"> <span style="color:red">${pcollecte} %</span> collecté</p>
+
+                    </div>
+                `;
+
     }
 
     activePopup = new mapboxgl.Popup({ offset: 25 })
@@ -287,99 +211,12 @@ function getCommuneDetails(name) {
     }
   });
 
-  // Gestionnaire d'événements pour afficher une barre latérale lors du clic sur un événement
-  map.on("click", "events-point", function (e) {
-    const coordinates = e.features[0].geometry.coordinates.slice();
-    let sidebarContent = "";
-
-    e.features.forEach((feature) => {
-      const title = feature.properties.title;
-      const description = feature.properties.description;
-      const videoUrl = feature.properties.video;
-
-      if (videoUrl) {
-        sidebarContent += `
-                    <iframe width="100%" height="200" src="${videoUrl}?autoplay=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <h2>${title}</h2>
-                    <p>${description}</p>
-                `;
-      } else {
-        const imageUrl =
-        feature.properties.type === "meeting"
-        ? "icon-meeting.png"
-        : "icon-debat.png";
-        sidebarContent += `
-                    <img src="${imageUrl}" width="100" alt="${title}" class="mb-3"/>
-                    <h2>${title}</h2>
-                    <p>${description}</p>
-                `;
-      }
-    });
-
-    sidebarContent +=
-      '<span id="close-sidebar" style="cursor: pointer; position: absolute; right: 10px; top: 10px;"><i class="fa fa-times"></i></span>';
-
-    const sidebar = document.getElementById("sidebar");
-    sidebar.innerHTML = sidebarContent;
-    sidebar.classList.add("open");
-
-    document
-      .getElementById("close-sidebar")
-      .addEventListener("click", function () {
-        sidebar.classList.remove("open");
-      });
-  });
-
-  document.getElementById("search-bar").addEventListener("input", function (e) {
-    const query = e.target.value.toLowerCase();
-    const resultsDiv = document.getElementById("search-results");
-    resultsDiv.innerHTML = "";
-
-    // Récupérez les données de la source
-    const eventData = map.getSource("events")._data.features;
-
-    if (query) {
-      eventData.forEach((event) => {
-        const eventTitle = event.properties.title.toLowerCase();
-        if (eventTitle.includes(query)) {
-          const resultDiv = document.createElement("div");
-          resultDiv.innerText = event.properties.title;
-          resultDiv.onclick = function () {
-            map.flyTo({ center: event.geometry.coordinates, zoom: 10 });
-            resultsDiv.style.display = "none";
-          };
-          resultsDiv.appendChild(resultDiv);
-        }
-      });
-      resultsDiv.style.display = "block";
-    } else {
-      resultsDiv.style.display = "none";
-    }
-  });
-
-  document.querySelectorAll(".legend-item").forEach((item) => {
-    item.addEventListener("click", function () {
-      const type = this.getAttribute("data-type");
-      const currentFilter = map.getFilter("events-point");
-
-      // Si le type d'icône est déjà filtré, supprimez le filtre et affichez tous les éléments
-      if (currentFilter && currentFilter[2] === type) {
-        map.setFilter("events-point", null);
-      } else {
-        // Sinon, appliquez le filtre pour le type d'icône spécifié
-        map.setFilter("events-point", ["==", "type", type]);
-      }
-    });
-  });
-});
 
 
-
-// -===================================================================================================
-// ==========================================================================================================?
+  })
 
 
-let votesChart;
+  let votesChart;
 function initializeChart(data) {
     const ctx = document.getElementById('votesChart').getContext('2d');
     votesChart = new Chart(ctx, {

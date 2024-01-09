@@ -70,14 +70,14 @@ class CausesTableSeeder extends Seeder
                 'libelle' => 'Collecte Spécial Noel veuves et Orphelins',
                 'photo' => 'whatsapp-image-2023-11-28-a-141003-decf01b4-f1LZ.jpg',
                 'objectif' => 5000000,
-                'collecte' => NULL,
+                'collecte' => 500,
                 'description' => '<p>Participez à notre Collecte Spéciale Noël dédiée aux veuves et aux orphelins. </p><p>En cette période festive, faisons briller la lumière de l\'espoir dans les vies de ceux qui ont perdu un être cher. Votre générosité permettra de créer des moments chaleureux et mémorables pour ces familles qui traversent des épreuves difficiles. Ensemble, offrons-leur le réconfort d\'une saison de fêtes empreinte de soutien et d\'amour. Chaque don, petit ou grand, contribue à alléger le fardeau et à apporter un sourire à ces cœurs endeuillés. Rejoignez-nous dans cet élan de solidarité et faites de cette période de Noël une source de joie et de réconfort pour ceux qui en ont le plus besoin. Merci de répandre la magie de Noël à travers l\'amour et la compassion.<br></p>',
                 'galerie' => '[]',
                 'status' => 'collecte',
                 'id_org' => 3,
                 'id_cate' => 3,
                 'created_at' => '2023-12-21 13:59:45',
-                'updated_at' => '2023-12-21 13:59:45',
+                'updated_at' => '2024-01-07 11:59:30',
             ),
             4 => 
             array (
@@ -85,14 +85,14 @@ class CausesTableSeeder extends Seeder
                 'libelle' => 'Donnons un souris à de nombreuse famille',
                 'photo' => 'whatsapp-image-2023-12-03-a-175931-399120d1-f4K7.jpg',
                 'objectif' => 5000000,
-                'collecte' => 1000,
+                'collecte' => 3000,
                 'description' => '<p>Participons tous à l\'initiative \'Donnons un sourire à de nombreuses familles\'. </p><p>Votre soutien peut illuminer les visages et apporter de la joie à ceux qui en ont besoin. En cette période où le simple fait de sourire peut être un cadeau précieux, chaque contribution compte. Ensemble, créons une chaîne de solidarité qui réchauffe les cœurs et donne de l\'espoir. Que ce geste simple, mais puissant, soit le début d\'une cascade de bonheur pour de nombreuses familles. Rejoignez-nous dans cette belle démarche et soyez l\'architecte d\'un monde où le partage d\'un sourire devient un acte transformateur. Merci de faire partie de cette belle aventure pleine d\'empathie et de générosité.<br></p>',
                 'galerie' => '[]',
                 'status' => 'collecte',
                 'id_org' => 1,
                 'id_cate' => 1,
                 'created_at' => '2023-12-21 14:22:22',
-                'updated_at' => '2023-12-21 22:01:16',
+                'updated_at' => '2024-01-07 11:42:41',
             ),
         ));
         

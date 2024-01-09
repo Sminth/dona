@@ -13,17 +13,17 @@
                         <div class="text">{!! $cause->description !!}</div>
                         <!-- counter block start -->
                         <div class="counter-block-three-single style-seven">
-                            <h4 class="title">Collecté<span>{{ $cause->collecte ?? 0 }} f</span></h4>
+                            <h4 class="title">Collecté<span>{{number_format(intVal($cause->collecte), 0, ' ', ' ')}} f</span></h4>
                             <div class="bar">
-                                <div class="count-text clr3">{{ (intVal($cause->collecte) / intVal($cause->objectif)) * 100 }}%
+                                <div class="count-text clr3">{{round((intVal($cause->collecte)/intVal($cause->objectif)*100),0)}}%
                                 </div>
                                 <div class="bar-inner bg4 count-bar"
                                     data-percent="{{ (intVal($cause->collecte) / intVal($cause->objectif)) * 100 }}%"> </div>
                             </div>
                             <ul>
-                                <li>Objectif<span class="crl4"> {{ $cause->objectif }} f</span></li>
-                                <li>Collecté<span class="crl2"> {{ $cause->collecte ?? 0 }} f</span></li>
-                                <li>Reste<span class="crl3"> {{ intVal($cause->objectif) - intVal($cause->collecte) }}
+                                <li>Objectif<span class="crl4"> {{number_format(intVal($cause->objectif), 0, ' ', ' ')}} f</span></li>
+                                <li>Collecté<span class="crl2">{{number_format(intVal($cause->collecte), 0, ' ', ' ')}} f</span></li>
+                                <li>Reste<span class="crl3"> {{ number_format(intVal($cause->objectif) - intVal($cause->collecte), 0, ' ', ' ') }}
                                         f</span></li>
                             </ul>
                         </div>
@@ -32,9 +32,9 @@
                                 class="primary_btn s-two menu-bar sidemenu-nav-toggler" style="margin-top: 50px">Faire un
                                 Don<i class="far fa-heart"></i></a>
                         </center>
-                        <center>
-                            <div style="display: fle;alt:enter; margin-bottom:180px">
-                                <div class="card" id="qrimg">
+                        <center style="display: fle;alt:enter; margin-bottom:180px">
+                            <div >
+                                <div class="card" id="qrimg" style="position: relative">
                                     <div class="card__img">
                                         <img src="{{ asset("storage/$cause->photo") }}" alt="">
                                         {{-- <svg xmlns="http://www.w3.org/2000/svg" width="100%"><rect fill="#ffffff" width="540" height="450"></rect><defs><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="0" x2="0" y1="0" y2="100%" gradientTransform="rotate(222,648,379)"><stop offset="0" stop-color="#ffffff"></stop><stop offset="1" stop-color="#FC726E"></stop></linearGradient><pattern patternUnits="userSpaceOnUse" id="b" width="300" height="250" x="0" y="0" viewBox="0 0 1080 900"><g fill-opacity="0.5"><polygon fill="#444" points="90 150 0 300 180 300"></polygon><polygon points="90 150 180 0 0 0"></polygon><polygon fill="#AAA" points="270 150 360 0 180 0"></polygon><polygon fill="#DDD" points="450 150 360 300 540 300"></polygon><polygon fill="#999" points="450 150 540 0 360 0"></polygon><polygon points="630 150 540 300 720 300"></polygon><polygon fill="#DDD" points="630 150 720 0 540 0"></polygon><polygon fill="#444" points="810 150 720 300 900 300"></polygon><polygon fill="#FFF" points="810 150 900 0 720 0"></polygon><polygon fill="#DDD" points="990 150 900 300 1080 300"></polygon><polygon fill="#444" points="990 150 1080 0 900 0"></polygon><polygon fill="#DDD" points="90 450 0 600 180 600"></polygon><polygon points="90 450 180 300 0 300"></polygon><polygon fill="#666" points="270 450 180 600 360 600"></polygon><polygon fill="#AAA" points="270 450 360 300 180 300"></polygon><polygon fill="#DDD" points="450 450 360 600 540 600"></polygon><polygon fill="#999" points="450 450 540 300 360 300"></polygon><polygon fill="#999" points="630 450 540 600 720 600"></polygon><polygon fill="#FFF" points="630 450 720 300 540 300"></polygon><polygon points="810 450 720 600 900 600"></polygon><polygon fill="#DDD" points="810 450 900 300 720 300"></polygon><polygon fill="#AAA" points="990 450 900 600 1080 600"></polygon><polygon fill="#444" points="990 450 1080 300 900 300"></polygon><polygon fill="#222" points="90 750 0 900 180 900"></polygon><polygon points="270 750 180 900 360 900"></polygon><polygon fill="#DDD" points="270 750 360 600 180 600"></polygon><polygon points="450 750 540 600 360 600"></polygon><polygon points="630 750 540 900 720 900"></polygon><polygon fill="#444" points="630 750 720 600 540 600"></polygon><polygon fill="#AAA" points="810 750 720 900 900 900"></polygon><polygon fill="#666" points="810 750 900 600 720 600"></polygon><polygon fill="#999" points="990 750 900 900 1080 900"></polygon><polygon fill="#999" points="180 0 90 150 270 150"></polygon><polygon fill="#444" points="360 0 270 150 450 150"></polygon><polygon fill="#FFF" points="540 0 450 150 630 150"></polygon><polygon points="900 0 810 150 990 150"></polygon><polygon fill="#222" points="0 300 -90 450 90 450"></polygon><polygon fill="#FFF" points="0 300 90 150 -90 150"></polygon><polygon fill="#FFF" points="180 300 90 450 270 450"></polygon><polygon fill="#666" points="180 300 270 150 90 150"></polygon><polygon fill="#222" points="360 300 270 450 450 450"></polygon><polygon fill="#FFF" points="360 300 450 150 270 150"></polygon><polygon fill="#444" points="540 300 450 450 630 450"></polygon><polygon fill="#222" points="540 300 630 150 450 150"></polygon><polygon fill="#AAA" points="720 300 630 450 810 450"></polygon><polygon fill="#666" points="720 300 810 150 630 150"></polygon><polygon fill="#FFF" points="900 300 810 450 990 450"></polygon><polygon fill="#999" points="900 300 990 150 810 150"></polygon><polygon points="0 600 -90 750 90 750"></polygon><polygon fill="#666" points="0 600 90 450 -90 450"></polygon><polygon fill="#AAA" points="180 600 90 750 270 750"></polygon><polygon fill="#444" points="180 600 270 450 90 450"></polygon><polygon fill="#444" points="360 600 270 750 450 750"></polygon><polygon fill="#999" points="360 600 450 450 270 450"></polygon><polygon fill="#666" points="540 600 630 450 450 450"></polygon><polygon fill="#222" points="720 600 630 750 810 750"></polygon><polygon fill="#FFF" points="900 600 810 750 990 750"></polygon><polygon fill="#222" points="900 600 990 450 810 450"></polygon><polygon fill="#DDD" points="0 900 90 750 -90 750"></polygon><polygon fill="#444" points="180 900 270 750 90 750"></polygon><polygon fill="#FFF" points="360 900 450 750 270 750"></polygon><polygon fill="#AAA" points="540 900 630 750 450 750"></polygon><polygon fill="#FFF" points="720 900 810 750 630 750"></polygon><polygon fill="#222" points="900 900 990 750 810 750"></polygon><polygon fill="#222" points="1080 300 990 450 1170 450"></polygon><polygon fill="#FFF" points="1080 300 1170 150 990 150"></polygon><polygon points="1080 600 990 750 1170 750"></polygon><polygon fill="#666" points="1080 600 1170 450 990 450"></polygon><polygon fill="#DDD" points="1080 900 1170 750 990 750"></polygon></g></pattern></defs><rect x="0" y="0" fill="url(#a)" width="100%" height="100%"></rect><rect x="0" y="0" fill="url(#b)" width="100%" height="100%"></rect></svg> --}}
@@ -42,70 +42,15 @@
                                     <div class="card__avatar" id="qrcode">
                                         {{-- <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><circle cx="64" cy="64" fill="#ff8475" r="60"></circle><circle cx="64" cy="64" fill="#f85565" opacity=".4" r="48"></circle><path d="m64 14a32 32 0 0 1 32 32v41a6 6 0 0 1 -6 6h-52a6 6 0 0 1 -6-6v-41a32 32 0 0 1 32-32z" fill="#7f3838"></path><path d="m62.73 22h2.54a23.73 23.73 0 0 1 23.73 23.73v42.82a4.45 4.45 0 0 1 -4.45 4.45h-41.1a4.45 4.45 0 0 1 -4.45-4.45v-42.82a23.73 23.73 0 0 1 23.73-23.73z" fill="#393c54" opacity=".4"></path><circle cx="89" cy="65" fill="#fbc0aa" r="7"></circle><path d="m64 124a59.67 59.67 0 0 0 34.69-11.06l-3.32-9.3a10 10 0 0 0 -9.37-6.64h-43.95a10 10 0 0 0 -9.42 6.64l-3.32 9.3a59.67 59.67 0 0 0 34.69 11.06z" fill="#4bc190"></path><path d="m45 110 5.55 2.92-2.55 8.92a60.14 60.14 0 0 0 9 1.74v-27.08l-12.38 10.25a2 2 0 0 0 .38 3.25z" fill="#356cb6" opacity=".3"></path><path d="m71 96.5v27.09a60.14 60.14 0 0 0 9-1.74l-2.54-8.93 5.54-2.92a2 2 0 0 0 .41-3.25z" fill="#356cb6" opacity=".3"></path><path d="m57 123.68a58.54 58.54 0 0 0 14 0v-25.68h-14z" fill="#fff"></path><path d="m64 88.75v9.75" fill="none" stroke="#fbc0aa" stroke-linecap="round" stroke-linejoin="round" stroke-width="14"></path><circle cx="39" cy="65" fill="#fbc0aa" r="7"></circle><path d="m64 91a25 25 0 0 1 -25-25v-16.48a25 25 0 1 1 50 0v16.48a25 25 0 0 1 -25 25z" fill="#ffd8c9"></path><path d="m91.49 51.12v-4.72c0-14.95-11.71-27.61-26.66-28a27.51 27.51 0 0 0 -28.32 27.42v5.33a2 2 0 0 0 2 2h6.81a8 8 0 0 0 6.5-3.33l4.94-6.88a18.45 18.45 0 0 1 1.37 1.63 22.84 22.84 0 0 0 17.87 8.58h13.45a2 2 0 0 0 2.04-2.03z" fill="#bc5b57"></path><path d="m62.76 36.94c4.24 8.74 10.71 10.21 16.09 10.21h5" style="fill:none;stroke-linecap:round;stroke:#fff;stroke-miterlimit:10;stroke-width:2;opacity:.1"></path><path d="m71 35c2.52 5.22 6.39 6.09 9.6 6.09h3" style="fill:none;stroke-linecap:round;stroke:#fff;stroke-miterlimit:10;stroke-width:2;opacity:.1"></path><circle cx="76" cy="62.28" fill="#515570" r="3"></circle><circle cx="52" cy="62.28" fill="#515570" r="3"></circle><ellipse cx="50.42" cy="69.67" fill="#f85565" opacity=".1" rx="4.58" ry="2.98"></ellipse><ellipse cx="77.58" cy="69.67" fill="#f85565" opacity=".1" rx="4.58" ry="2.98"></ellipse><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="m64 67v4" stroke="#fbc0aa" stroke-width="4"></path><path d="m55 56h-9.25" opacity=".2" stroke="#515570" stroke-width="2"></path><path d="m82 56h-9.25" opacity=".2" stroke="#515570" stroke-width="2"></path></g><path d="m64 84c5 0 7-3 7-3h-14s2 3 7 3z" fill="#f85565" opacity=".4"></path><path d="m65.07 78.93-.55.55a.73.73 0 0 1 -1 0l-.55-.55c-1.14-1.14-2.93-.93-4.27.47l-1.7 1.6h14l-1.66-1.6c-1.34-1.4-3.13-1.61-4.27-.47z" fill="#f85565"></path></svg> --}}
                                     </div>
-                                    <div class="card__title">{{ $cause->libelle }}</div>
-                                    <div class="card__subtitle">{{ $cause->organisations->nom }}</div>
+                                    <div ><button class="card__titl">{{ $cause->libelle }}</button></div>
+                                    {{-- <div class="card__subtitle">{{ $cause->organisations->nom }}</div> --}}
                                     <div class="card__wrapper">
                                         <button class="card__btn">scanner et faites parler votre coeur</button>
                                         {{-- <button class="card__btn card__btn-solid">Button</button> --}}
-                                    </div>
-
-
-                                    <div class="buttons" style="margin-top: 30px">
-                                        <button class="main-button">
-                                            <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M15.75 5.125a3.125 3.125 0 1 1 .754 2.035l-8.397 3.9a3.124 3.124 0 0 1 0 1.88l8.397 3.9a3.125 3.125 0 1 1-.61 1.095l-8.397-3.9a3.125 3.125 0 1 1 0-4.07l8.397-3.9a3.125 3.125 0 0 1-.144-.94Z">
-                                                </path>
-                                            </svg>
-                                        </button>
-
-
-                                        <button class="messenger-button button"
-                                            style="transition-delay: 0.3s, 0s, 0.3s; transition-property: translate, background, box-shadow;">
-                                            <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M2 11.7C2 6.126 6.366 2 12 2s10 4.126 10 9.7c0 5.574-4.366 9.7-10 9.7-1.012 0-1.982-.134-2.895-.384a.799.799 0 0 0-.534.038l-1.985.877a.8.8 0 0 1-1.122-.707l-.055-1.779a.799.799 0 0 0-.269-.57C3.195 17.135 2 14.615 2 11.7Zm6.932-1.824-2.937 4.66c-.281.448.268.952.689.633l3.156-2.395a.6.6 0 0 1 .723-.003l2.336 1.753a1.501 1.501 0 0 0 2.169-.4l2.937-4.66c.283-.448-.267-.952-.689-.633l-3.156 2.395a.6.6 0 0 1-.723.003l-2.336-1.754a1.5 1.5 0 0 0-2.169.4v.001Z">
-                                                </path>
-                                            </svg>
-                                        </button>
-
-                                        <button class="instagram-button button"
-                                            style="transition-delay: 0.5s, 0s, 0.5s; transition-property: translate, background, box-shadow;">
-                                            <svg width="30" height="30" fill="currentColor"
-                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                                <path
-                                                    d="M12,2C6.477,2,2,6.477,2,12s4.477,10,10,10s10-4.477,10-10S17.523,2,12,2z M17.215,7.713l-2.359,11.105   c-0.143,0.66-0.528,0.815-1.07,0.5l-3.301-2.365l-1.594,1.527c-0.189,0.186-0.349,0.349-0.705,0.349l0.246-3.467l5.553-5.006   c0.246-0.221-0.055-0.343-0.373-0.123l-6.859,4.742l-2.971-0.928c-0.66-0.207-0.674-0.656,0.147-0.963l12.189-4.57   C17.672,6.908,17.58,7.292,17.215,7.713z" />
-                                            </svg>
-
-                                        </button>
-
-                                        <button class="whatsapp-button button"
-                                            style="transition-delay: 0.7s, 0s, 0.7s; transition-property: translate, background, box-shadow;">
-                                            {{-- <a href="whatsapp://send?text=https://humoropedia.com/wp-content/uploads/2014/08/monkey-awesome-photo.jpg"> --}}
-
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                                height="30" width="30">
-                                                <path
-                                                    d="M19.001 4.908A9.817 9.817 0 0 0 11.992 2C6.534 2 2.085 6.448 2.08 11.908c0 1.748.458 3.45 1.321 4.956L2 22l5.255-1.377a9.916 9.916 0 0 0 4.737 1.206h.005c5.46 0 9.908-4.448 9.913-9.913A9.872 9.872 0 0 0 19 4.908h.001ZM11.992 20.15A8.216 8.216 0 0 1 7.797 19l-.3-.18-3.117.818.833-3.041-.196-.314a8.2 8.2 0 0 1-1.258-4.381c0-4.533 3.696-8.23 8.239-8.23a8.2 8.2 0 0 1 5.825 2.413 8.196 8.196 0 0 1 2.41 5.825c-.006 4.55-3.702 8.24-8.24 8.24Zm4.52-6.167c-.247-.124-1.463-.723-1.692-.808-.228-.08-.394-.123-.556.124-.166.246-.641.808-.784.969-.143.166-.29.185-.537.062-.247-.125-1.045-.385-1.99-1.23-.738-.657-1.232-1.47-1.38-1.716-.142-.247-.013-.38.11-.504.11-.11.247-.29.37-.432.126-.143.167-.248.248-.413.082-.167.043-.31-.018-.433-.063-.124-.557-1.345-.765-1.838-.2-.486-.404-.419-.557-.425-.142-.009-.309-.009-.475-.009a.911.911 0 0 0-.661.31c-.228.247-.864.845-.864 2.067 0 1.22.888 2.395 1.013 2.56.122.167 1.742 2.666 4.229 3.74.587.257 1.05.408 1.41.523.595.19 1.13.162 1.558.1.475-.072 1.464-.6 1.673-1.178.205-.58.205-1.075.142-1.18-.061-.104-.227-.165-.475-.29Z">
-                                                </path>
-                                            </svg>
-                                            {{-- </a> --}}
-                                        </button>
-
-                                        <button id="download" class="twitter-button button"
-                                            style="transition-delay: 0.3s, 0s, 0.3s; transition-property: translate, background, box-shadow;">
-                                            <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 Z M11,7 L11,13 L8,13 L12,17 L16,13 L13,13 L13,7 L11,7 Z">
-                                                </path>
-                                            </svg>
-
-                                        </button>
 
                                     </div>
+                                    <img style="width: 100px;height:90px;position: absolute;top:50%; transform : translateY(-50%);z-index:1111111111111" src="{{ asset('assets/images/logo.png') }}"/>
+
 
 
 
@@ -113,6 +58,64 @@
 
 
                             </div>
+
+                            <div class="buttons" style="margin-top:20px">
+                                <button class="main-button">
+                                    <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.75 5.125a3.125 3.125 0 1 1 .754 2.035l-8.397 3.9a3.124 3.124 0 0 1 0 1.88l8.397 3.9a3.125 3.125 0 1 1-.61 1.095l-8.397-3.9a3.125 3.125 0 1 1 0-4.07l8.397-3.9a3.125 3.125 0 0 1-.144-.94Z">
+                                        </path>
+                                    </svg>
+                                </button>
+
+
+                                <button class="messenger-button button"
+                                    style="transition-delay: 0.3s, 0s, 0.3s; transition-property: translate, background, box-shadow;">
+                                    <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M2 11.7C2 6.126 6.366 2 12 2s10 4.126 10 9.7c0 5.574-4.366 9.7-10 9.7-1.012 0-1.982-.134-2.895-.384a.799.799 0 0 0-.534.038l-1.985.877a.8.8 0 0 1-1.122-.707l-.055-1.779a.799.799 0 0 0-.269-.57C3.195 17.135 2 14.615 2 11.7Zm6.932-1.824-2.937 4.66c-.281.448.268.952.689.633l3.156-2.395a.6.6 0 0 1 .723-.003l2.336 1.753a1.501 1.501 0 0 0 2.169-.4l2.937-4.66c.283-.448-.267-.952-.689-.633l-3.156 2.395a.6.6 0 0 1-.723.003l-2.336-1.754a1.5 1.5 0 0 0-2.169.4v.001Z">
+                                        </path>
+                                    </svg>
+                                </button>
+
+                                <button class="instagram-button button"
+                                    style="transition-delay: 0.5s, 0s, 0.5s; transition-property: translate, background, box-shadow;">
+                                    <svg width="30" height="30" fill="currentColor"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path
+                                            d="M12,2C6.477,2,2,6.477,2,12s4.477,10,10,10s10-4.477,10-10S17.523,2,12,2z M17.215,7.713l-2.359,11.105   c-0.143,0.66-0.528,0.815-1.07,0.5l-3.301-2.365l-1.594,1.527c-0.189,0.186-0.349,0.349-0.705,0.349l0.246-3.467l5.553-5.006   c0.246-0.221-0.055-0.343-0.373-0.123l-6.859,4.742l-2.971-0.928c-0.66-0.207-0.674-0.656,0.147-0.963l12.189-4.57   C17.672,6.908,17.58,7.292,17.215,7.713z" />
+                                    </svg>
+
+                                </button>
+
+                                <button class="whatsapp-button button"
+                                    style="transition-delay: 0.7s, 0s, 0.7s; transition-property: translate, background, box-shadow;">
+                                    {{-- <a href="whatsapp://send?text=https://humoropedia.com/wp-content/uploads/2014/08/monkey-awesome-photo.jpg"> --}}
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        height="30" width="30">
+                                        <path
+                                            d="M19.001 4.908A9.817 9.817 0 0 0 11.992 2C6.534 2 2.085 6.448 2.08 11.908c0 1.748.458 3.45 1.321 4.956L2 22l5.255-1.377a9.916 9.916 0 0 0 4.737 1.206h.005c5.46 0 9.908-4.448 9.913-9.913A9.872 9.872 0 0 0 19 4.908h.001ZM11.992 20.15A8.216 8.216 0 0 1 7.797 19l-.3-.18-3.117.818.833-3.041-.196-.314a8.2 8.2 0 0 1-1.258-4.381c0-4.533 3.696-8.23 8.239-8.23a8.2 8.2 0 0 1 5.825 2.413 8.196 8.196 0 0 1 2.41 5.825c-.006 4.55-3.702 8.24-8.24 8.24Zm4.52-6.167c-.247-.124-1.463-.723-1.692-.808-.228-.08-.394-.123-.556.124-.166.246-.641.808-.784.969-.143.166-.29.185-.537.062-.247-.125-1.045-.385-1.99-1.23-.738-.657-1.232-1.47-1.38-1.716-.142-.247-.013-.38.11-.504.11-.11.247-.29.37-.432.126-.143.167-.248.248-.413.082-.167.043-.31-.018-.433-.063-.124-.557-1.345-.765-1.838-.2-.486-.404-.419-.557-.425-.142-.009-.309-.009-.475-.009a.911.911 0 0 0-.661.31c-.228.247-.864.845-.864 2.067 0 1.22.888 2.395 1.013 2.56.122.167 1.742 2.666 4.229 3.74.587.257 1.05.408 1.41.523.595.19 1.13.162 1.558.1.475-.072 1.464-.6 1.673-1.178.205-.58.205-1.075.142-1.18-.061-.104-.227-.165-.475-.29Z">
+                                        </path>
+                                    </svg>
+                                    {{-- </a> --}}
+                                </button>
+
+                                <button id="download" class="twitter-button button"
+                                    style="transition-delay: 0.3s, 0s, 0.3s; transition-property: translate, background, box-shadow;">
+                                    <svg width="30" height="30" fill="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12,2 C17.5228475,2 22,6.4771525 22,12 C22,17.5228475 17.5228475,22 12,22 C6.4771525,22 2,17.5228475 2,12 C2,6.4771525 6.4771525,2 12,2 Z M11,7 L11,13 L8,13 L12,17 L16,13 L13,13 L13,7 L11,7 Z">
+                                        </path>
+                                    </svg>
+
+                                </button>
+
+                            </div>
+
                         </center>
                     </div>
                 </div>
@@ -167,7 +170,7 @@
                         <div class="icon-list">
                             <ul>
                                 @foreach (App\Models\categories::get() as $cate)
-                                    <li><a href="#"><i
+                                    <li><a href="/causes?categorie={{$cate->id}}"><i
                                                 class="fas fa-arrow-right"></i>{{ $cate->libelle }}<span>{{ $cate->getCausesEnCoursCount() }}</span></a>
                                     </li>
                                 @endforeach
@@ -279,8 +282,9 @@
             height: 100px;
         }
 
-        .card__title {
-            margin-top: 80px;
+        .card__titl {
+            z-index: 11111111111;
+            margin-top: 100px;
             font-weight: bold;
             font-size: 18px;
             color: #000;
@@ -534,8 +538,7 @@
     <script>
         // Exemple de message à partager
         let title = encodeURIComponent("Soutenez notre cause :  {{ $cause->libelle }}");
-        let message = encodeURIComponent("Aidez-nous à atteindre notre objectif de " + {{ $cause->objectif }} +
-            " f. Chaque contribution compte !");
+        let message = encodeURIComponent("Aidez-nous à atteindre notre objectif de {{number_format(intVal($cause->objectif), 0, ' ', ' ')}} f. Chaque contribution compte !");
         let shareUrl = encodeURIComponent(window.location.href);
 
         // Bouton WhatsApp
@@ -567,5 +570,6 @@
                 document.getElementById('dona').click();
             }
         });
+
     </script>
 @endsection

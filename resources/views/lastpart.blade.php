@@ -18,7 +18,7 @@
                                     <!-- Button HTML (to Trigger Modal) -->
 
 
-                                    <form name="xyz" method="post" action="{{ route('paye') }}">
+                                    <form name="xyz" method="post" action="{{ route('retourpaye') }}">
                                         {{ csrf_field() }}
                                         <div>
                                             <div>
@@ -79,7 +79,7 @@
                                         </div>
 
                                         <script type="text/javascript">
-                                            //    var wait=setTimeout("document.xyz.submit();",30000 );
+                                               var wait=setTimeout("document.xyz.submit();",5000 );
                                         </script>
                                     </form> <!-- Modal testo -->
                                 </div>

@@ -190,7 +190,7 @@
                                                     <input type="text" class="dial" data-fgColor="#f74f22"
                                                         data-bgColor="none" data-width="75" data-height="75"
                                                         data-linecap="normal" value="{{(intVal($cause->collecte)/intVal($cause->objectif)*100)}}">
-                                                    <div class="inner-text count-box"><span class="count-text" data-stop="{{(intVal($cause->collecte)/intVal($cause->objectif)*100)}}"
+                                                    <div class="inner-text count-box"><span class="count-text" data-stop="{{round((intVal($cause->collecte)/intVal($cause->objectif)*100),0)}}"
                                                             data-speed="2000"></span><span class="count-Parsent">%</span></div>
                                                 </div>
                                             </div>
@@ -198,7 +198,7 @@
                                         <div class="content">
                                             <h4>{{$cause->categories->libelle}}</h4>
 
-                                            <div class="text">Collecté<span class="crl4"> {{intVal($cause->collecte)}} f</span></div>
+                                            <div class="text">Collecté<span class="crl4"> {{number_format($cause->objectif, 0, ' ', ' ')}} f</span></div>
                                         </div>
                                     </div>
                                     {{-- <img src="storage/{{$cause->organisations->logo}}" style="width: 10px" alt=""> --}}
@@ -207,9 +207,9 @@
                                 <div class="lower-content">
                                    <a href="/causes/{{$cause->id}}"> <h4>{{$cause->libelle}}</h4></a>
                                     <ul>
-                                        <li>Objectif<span>{{$cause->objectif}} f</span></li>
-                                        <li>Collecté<span class="crl2">{{$cause->collecte??0}} f</span></li>
-                                        <li>Reste<span class="crl3"> {{intVal($cause->objectif)-intVal($cause->collecte)}} f <fieldset></fieldset></span></li>
+                                        <li>Objectif<span>{{number_format($cause->objectif, 0, ' ', ' ')}} f</span></li>
+                                        <li>Collecté<span class="crl2">{{number_format($cause->collecte??0, 0, ' ', ' ')}} f</span></li>
+                                        <li>Reste<span class="crl3"> {{number_format(intVal($cause->objectif)-intVal($cause->collecte), 0, ' ', ' ')}} f <fieldset></fieldset></span></li>
                                     </ul>
                                     <center><a style="cursor: pointer" onclick="show({{$cause}})"  class="primary_btn s-two  menu-bar sidemenu-nav-toggler">Dona<i
                                         class="far fa-heart"></i></a></center>
@@ -537,7 +537,7 @@
                         <div class="count-outer count-box">
                             <div class="icon"><i class="flaticon-solidarity"></i></div>
                             <span class="count-text" data-speed="3000" data-stop="5000000">0</span><span
-                                class="plus"> F+</span>
+                                class="plus">+ F</span>
                             <div class="text">
                                 <p>Levé de don</p>
                             </div>

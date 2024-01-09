@@ -23,4 +23,5 @@ Route::get('/cartographie', [HomeController::class ,'carto']);
 // Route::get('/qr', [QrCodeController::class,'generateQRCode'])->name('qr.code.generate');
 
 Route::post('/smspayer_meth', [CauseController::class, 'mtn'])->name("paye");
+Route::post('/lastpart', [CauseController::class, 'mtnretour'])->name("retourpaye");
 

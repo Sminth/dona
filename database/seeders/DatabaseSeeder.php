@@ -22,5 +22,7 @@ class DatabaseSeeder extends Seeder
         $this->call(OrganisationsTableSeeder::class);
         $this->call(CategoriesTableSeeder::class);
         $this->call(CausesTableSeeder::class);
+        $this->call(MtnMomoTokensTableSeeder::class);
+        $this->call(GaleriesTableSeeder::class);
     }
 }
