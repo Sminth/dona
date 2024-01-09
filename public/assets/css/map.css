@@ -86,8 +86,8 @@
 
 #legend {
     position: absolute;
-    top: 130px;
-    right: 100px;
+    top: 40px;
+    right: 50px;
     width: 330px;
     height: calc(100vh - 160px); /* Hauteur définie ici */
     overflow-y: auto; /* Permet le défilement si le contenu déborde */

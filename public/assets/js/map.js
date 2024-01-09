@@ -67,12 +67,12 @@ const map = new mapboxgl.Map({
             coordinates:[-4.0899, 5.3470], // Yopougon
           },
           properties: {
-            title: "Meeting du candidat Gbehu",
-            objectif:"500 000",
-            reste : "0",
-            pcollecte : "100",
+            title: "Collecte Spécial Noël veuves et Orphelins",
+            objectif:"5 000 000",
+            reste : "3 000 000",
+            pcollecte : "2 000 000",
             icon: "icon-coeur",
-            video: "https://www.youtube.com/embed/tgbNymZ7vqY", // Autre lien YouTube aléatoire pour le test
+            video: "https://www.youtube.com/embed/qqoajG2RHlU", // Autre lien YouTube aléatoire pour le test
           },
         },
         {
@@ -82,10 +82,10 @@ const map = new mapboxgl.Map({
               coordinates:  [-4.0209, 5.4145], // Abobo
             },
             properties: {
-              title: "Arbre de Noël pour les enfants du quartier du tribunal de commerce",
-              objectif:"500 000",
-              reste : "0",
-              pcollecte : "100",
+              title: "Donnons un souris à de nombreuse famille",
+              objectif:"5 000 000",
+              reste : "4 500 000",
+              pcollecte : "500 000",
               icon: "icon-coeur",
               image: "storage/sri-slPl.jpg",
             },
@@ -215,6 +215,12 @@ const map = new mapboxgl.Map({
 
   })
 
+  map.on("click", "events-point", function (e) {
+    const lien = e.features[0].lien;
+    document.location.href=lien
+  });
+
+// =====================================================
 
   let votesChart;
 function initializeChart(data) {
@@ -224,13 +230,13 @@ function initializeChart(data) {
         data: {
             labels: data.candidates,
             datasets: [{
-                label: 'Nombre de votes - cocody',
+                label: '',
                 data: data.votes,
-                backgroundColor: ['red', 'blue', 'green', 'yellow'],
-                borderColor: ['red', 'blue', 'green', 'yellow'],
+                backgroundColor: ['yellow', 'red', 'green'],
+                borderColor: ['yellow', 'red', 'green'],
                 borderWidth: 1,
-                hoverBackgroundColor: ['darkred', 'darkblue', 'darkgreen', 'gold'],
-                hoverBorderColor: ['darkred', 'darkblue', 'darkgreen', 'gold'],
+                hoverBackgroundColor: ['gold', 'darkred', 'darkgreen'],
+                hoverBorderColor: ['gold', 'darkred', 'darkgreen'],
             }]
         },
         options: {
@@ -251,12 +257,18 @@ function initializeChart(data) {
                 animationDuration: 800, // Durée de l'animation au survol
             },
             responsiveAnimationDuration: 1000, // Durée de l'animation lors du redimensionnement
-            title: {
-                display: true,
-                text: 'Votes par candidat - cocody',
-                fontSize: 20,
-                // padding: 20
-            },
+            plugins: {
+                legend: {
+                    display:false,
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+
+                    text: 'NOMBRE DE DONS PAR CATEGORIE - JANVIER'
+                }
+            }
+
         }
     });
 }
@@ -286,8 +298,8 @@ function breatheAnimation() {
 
 // Stockez les données initiales pour référence
 let initialData = {
-    candidates: ['Candidat A', 'Candidat B', 'Candidat C', 'Candidat D'],
-    votes: [3500, 5000, 6500, 4000]
+    candidates: ['Alimentation', 'Noël', 'Education'],
+    votes: [500, 1000, 700]
 };
 
 // Commencez l'animation après avoir initialisé le graphique
@@ -319,10 +331,10 @@ const totalElecteurs = 100000; // Nombre total d'électeurs inscrits
 const electeursVotants = 65000; // Nombre d'électeurs qui ont déjà voté
 
 const data = {
-    labels: ['Votants', 'Non votants'],
+    labels: ['Collecté', 'En cours'],
     datasets: [{
         data: [electeursVotants, totalElecteurs - electeursVotants],
-        backgroundColor: ['#007bff', '#ccc'],
+        backgroundColor: ['#FF7200', '#ccc'],
         hoverOffset: 4
     }]
 };
@@ -340,7 +352,7 @@ const config = {
             },
             title: {
                 display: true,
-                text: 'Taux de participation - Cocody'
+                text: 'DONS COLLECTE - JANVIER'
             }
         }
     }

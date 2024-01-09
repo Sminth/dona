@@ -8,7 +8,7 @@
 
 </style>
 
-<div style="position: relative;height:75vh">
+<div style="position: relative;height:80vh">
     <div id="map"></div>
     <div id="sidebar" class="shadow-lg"></div>
 
