@@ -27,7 +27,7 @@ class WelcomeMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Merci pour votre Dona ❤️',
+            subject: 'Merci pour votre Dona ❤️ - Suivez son parcours !',
         );
     }
 

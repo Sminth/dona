@@ -1,754 +1,481 @@
-<!DOCTYPE html>
-<html lang="fr">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Annonce soumise avec succes</title>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="{{ asset('assets/css/bootstrap.css') }}" id="app-style" rel="stylesheet">
-    <link href="{{ asset('assets/css/fontawesome-all.css') }}" id="app-style" rel="stylesheet">
-    <link href="{{ asset('assets/css/custom-animate.css') }}" id="app-style" rel="stylesheet">
-    <link href="{{ asset('assets/css/animate.css') }}" id="app-style" rel="stylesheet">
-    <link href="{{ asset('assets/css/jquery-ui-1.9.2.custom.min.css') }}" id="app-style" rel="stylesheet">
-    <link href="{{ asset('assets/css/nice-select.css') }}" id="app-style" rel="stylesheet">
-    <link href="{{ asset('assets/css/flaticon.css') }}" id="app-style" rel="stylesheet">
-    <link href="{{ asset('assets/css/owl.css') }}" id="app-style" rel="stylesheet">
-    <link href="{{ asset('assets/css/jquery.fancybox.min.css') }}" id="app-style" rel="stylesheet">
-    <link href="{{ asset('assets/css/swiper.min.css') }}" id="app-style" rel="stylesheet">
-    <link href="{{ asset('assets/css/custom-menu.css') }}" id="app-style" rel="stylesheet">
+  <!--
+>>>>>>>>> CHANGING PROGRESS STEP IMAGES <<<<<<<<<<<<<<<
+-If you would like to change the progress step images please use the URL's below or your own. Also, change the active class to the correct td.
 
 
-    <link href="{{ asset('assets/css/style.css') }}" id="app-style" rel="stylesheet">
-    <!-- Responsive File -->
-    <link href="{{ asset('assets/css/responsive.css') }}" id="app-style" rel="stylesheet">
-
-    <!-- Color File -->
-    <link href="{{ asset('assets/css/color.css') }}" id="app-style" rel="stylesheet">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
-        rel="stylesheet">
+Pink Step One - http://s3.amazonaws.com/swu-filepicker/iRYXoEbnSQAMzQYRy6hG_v33_03.jpg
+White Step One - http://s3.amazonaws.com/swu-filepicker/0oYLLViRBKv7a0Lzh6vC_v3_03.jpg
 
 
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
-
-    @yield('extra-css')
+Pink Step Two - http://s3.amazonaws.com/swu-filepicker/YL3H3V5bRyGuy6pess9T_v33_04.jpg
+White Step Two - http://s3.amazonaws.com/swu-filepicker/piymv8dOQmuAc8nxb4Or_v3_04.jpg
 
 
+Pink Step Three - http://s3.amazonaws.com/swu-filepicker/caYiXZF9TBS23k4EPXIN_v33_05.jpg
+White Step Three - http://s3.amazonaws.com/swu-filepicker/YSTlgtgaTSa897tPTUhl_v3_05.jpg
+-->
 
-    <title>Dona - Accueil</title>
+  <style type="text/css">
+    /* Take care of image borders and formatting, client hacks */
+    img { max-width: 600px; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic;}
+    a img { border: none; }
+    table { border-collapse: collapse !important;}
+    #outlook a { padding:0; }
+    .ReadMsgBody { width: 100%; }
+    .ExternalClass { width: 100%; }
+    .backgroundTable { margin: 0 auto; padding: 0; width: 100% !important; }
+    table td { border-collapse: collapse; }
+    .ExternalClass * { line-height: 115%; }
+    .container-for-gmail-android { min-width: 600px; }
 
+
+    /* General styling */
+    * {
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: none;
+      width: 100% !important;
+      margin: 0 !important;
+      height: 100%;
+      color: #676767;
+    }
+
+    td {
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #777777;
+      text-align: center;
+      line-height: 21px;
+    }
+
+    a {
+      color: #676767;
+      text-decoration: none !important;
+    }
+
+    .pull-left {
+      text-align: left;
+    }
+
+    .pull-right {
+      text-align: right;
+    }
+
+    .header-lg,
+    .header-md,
+    .header-sm {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: normal;
+      padding: 35px 0 0;
+      color: #4d4d4d;
+    }
+
+    .header-md {
+      font-size: 24px;
+    }
+
+    .header-sm {
+      padding: 5px 0;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .content-padding {
+      padding: 20px 0 30px;
+    }
+
+    .mobile-header-padding-right {
+      width: 290px;
+      text-align: right;
+      padding-left: 10px;
+    }
+
+    .mobile-header-padding-left {
+      width: 290px;
+      text-align: left;
+      padding-left: 10px;
+    }
+
+    .free-text {
+      width: 100% !important;
+      padding: 10px 60px 0px;
+    }
+
+    .block-rounded {
+      border-radius: 5px;
+      border: 1px solid #e5e5e5;
+      vertical-align: top;
+    }
+
+    .button {
+      padding: 55px 0 0;
+    }
+
+    .info-block {
+      padding: 0 20px;
+      width: 260px;
+    }
+
+    .mini-block-container {
+      padding: 30px 50px;
+      width: 500px;
+    }
+
+    .mini-block {
+      background-color: #ffffff;
+      width: 498px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      padding: 60px 75px;
+    }
+
+    .block-rounded {
+      width: 260px;
+    }
+
+    .info-img {
+      width: 258px;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .force-width-img {
+      width: 480px;
+      height: 1px !important;
+    }
+
+    .force-width-full {
+      width: 600px;
+      height: 1px !important;
+    }
+
+    .user-img img {
+      width: 82px;
+      border-radius: 5px;
+      border: 1px solid #cccccc;
+    }
+
+    .user-img {
+      width: 92px;
+      text-align: left;
+    }
+
+    .user-msg {
+      width: 236px;
+      font-size: 14px;
+      text-align: left;
+      font-style: italic;
+    }
+
+    .code-block {
+      padding: 10px 0;
+      border: 1px solid #cccccc;
+      width: 20px;
+      color: #4d4d4d;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+     .mini-img {
+      padding: 5px;
+      width: 140px;
+    }
+
+    .mini-img img {
+      border-radius: 5px;
+      width: 140px;
+    }
+
+    .mini-imgs {
+      padding: 25px 0 30px;
+    }
+
+    .progress-bar {
+      padding: 0 15px 0;
+    }
+
+    .step {
+      vertical-align: top;
+    }
+
+    .step img {
+      width: 109px;
+      height: 78px;
+    }
+
+    .active {
+      font-weight: bold;
+
+    }
+
+  </style>
+
+  <style type="text/css" media="screen">
+    @import url(http://fonts.googleapis.com/css?family=Oxygen:400,700);
+  </style>
+
+  <style type="text/css" media="screen">
+    @media screen {
+      /* Thanks Outlook 2013! */
+      * {
+        font-family: 'Oxygen', 'Helvetica Neue', 'Arial', 'sans-serif' !important;
+      }
+    }
+  </style>
+
+  <style type="text/css" media="only screen and (max-width: 480px)">
+    /* Mobile styles */
+    @media only screen and (max-width: 480px) {
+
+      table[class*="container-for-gmail-android"] {
+        min-width: 290px !important;
+        width: 100% !important;
+      }
+
+      table[class="w320"] {
+        width: 320px !important;
+      }
+
+      td[class*="mobile-header-padding-left"] {
+        width: 160px !important;
+      }
+
+      img[class="force-width-gmail"] {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+      }
+
+      td[class="mobile-block"] {
+        display: block !important;
+      }
+
+      td[class="mini-img"],
+      td[class="mini-img"] img{
+        width: 150px !important;
+      }
+
+      td[class*="mobile-header-padding-left"] {
+        width: 160px !important;
+        padding-left: 0 !important;
+      }
+
+      td[class*="mobile-header-padding-right"] {
+        width: 160px !important;
+        padding-right: 0 !important;
+      }
+
+      td[class="header-lg"] {
+        font-size: 24px !important;
+        padding-bottom: 5px !important;
+      }
+
+      td[class="header-md"] {
+        font-size: 18px !important;
+        padding-bottom: 5px !important;
+      }
+
+      td[class="content-padding"] {
+        padding: 5px 0 30px !important;
+      }
+
+       td[class="button"] {
+        padding: 5px !important;
+      }
+
+      td[class*="free-text"] {
+        padding: 10px 18px 30px !important;
+      }
+
+      img[class="force-width-img"],
+      img[class="force-width-full"] {
+        display: none !important;
+      }
+
+      td[class="info-block"] {
+        display: block !important;
+        width: 280px !important;
+        padding-bottom: 40px !important;
+      }
+
+      td[class="info-img"],
+      img[class="info-img"] {
+        width: 278px !important;
+      }
+
+      td[class="mini-block-container"] {
+        padding: 8px 20px !important;
+        width: 280px !important;
+      }
+
+      td[class="mini-block"] {
+        padding: 20px 0 !important;
+      }
+
+      td[class*="step"] img {
+        width: 86px !important;
+        height: 62px !important;
+      }
+
+      td[class="progress-bar"] {
+        padding: 0 11px 25px;
+      }
+
+      td[class="user-img"] {
+        display: block !important;
+        text-align: center !important;
+        width: 100% !important;
+        padding-bottom: 10px;
+      }
+
+      td[class="user-msg"] {
+        display: block !important;
+        padding-bottom: 20px;
+      }
+    }
+  </style>
 </head>
 
-<body lass="body-wrapper">
-
-    <div class="page-wrapper">
-
-        <header class="main-header header-style-one header-s-two">
-            <div class="header-top">
-                <div class="header-container-box">
-                    <div class="wrapper-box">
-                        <div class="left-column">
-                            <ul class="contact-info box-s-two">
-                                <li><a href="mailto:hotline@gmail.com"><i
-                                            class="far fa-envelope"><span>Email:</span></i>virtus225one@gmail.com</a>
-                                </li>
-                                <li class="crl-1">|</li>
-                            </ul>
-                        </div>
-                        <div class="right-column box-s-two">
-                            <div class="text">Entreprise caritative à but non lucratif</div>
-                            <ul>
-                                <li><a href="tel:09806764956"><span>Contactez nous : </span> +225 (07) 88364403</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Header Upper -->
-            <div class="header-upper">
-                <div class="header-container-box">
-                    <div class="inner-container">
-                        <div class="left-column">
-                            <div class="logo">
-                                <a href="/">
-                                    <img style="width: 100px;height:90px" src="{{ asset('assets/images/lgo.png') }}"
-                                        alt="">
-                                    {{-- <h1 style="color: white;">DONA</h1> --}}
-                                </a>
-                            </div>
-                            <!--Nav Box-->
-                            <div class="nav-outer">
-                                <!--Mobile Navigation Toggler-->
-                                <div class="mobile-nav-toggler"><img
-                                        src="{{ asset('assets/images/icons/icon-bar.png') }}" alt=""></div>
-
-                                <nav class="main-menu navbar-expand-md navbar-light">
-                                    <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
-                                        <ul class="navigation">
-                                            <li><a href="/">Accueil </a>
-
-                                            </li>
-
-                                            <li><a href="/causes">Nos Causes</a>
-
-                                            </li>
-                                            <li class="#"><a href="/cartographie">Cartographie des causes</a>
-
-                                            </li>
-                                            {{-- <li><a href="/contact">Nous Contactez</a></li> --}}
-                                        </ul>
-                                    </div>
-                                </nav>
-                            </div>
-                        </div>
-
-
-                        <div class="right-column">
-
-                            {{-- <div class="menu-bar sidemenu-nav-toggler"><img src="assets/images/icons/icon-menu.png"
-                                    alt=""></div> --}}
-                            <a href="/causes" class="primary_btn style-seven donate_button">Faire une Dona<i
-                                    class="far fa-heart"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="sticky-header">
-                <div class="header-upper">
-                    <div class="header-container-box">
-                        <div class="inner-container">
-                            <div class="left-column">
-                                <div class="logo">
-                                    <a href="/">
-                                        <img style="width: 100px;height:90px"
-                                            src="{{ asset('assets/images/logo.png') }}" alt="">
-                                        {{-- <h1 style="color: white;">DONA</h1> --}}
-                                    </a>
-                                </div>
-                                <div class="nav-outer">
-                                    <div class="mobile-nav-toggler"><img src="assets/images/icons/icon-bar.png"
-                                            alt=""></div>
-
-                                    <nav class="main-menu navbar-expand-md navbar-light">
-                                    </nav>
-
-                                </div>
-                            </div>
-
-
-                            <div class="right-column">
-
-                                {{-- <div class="menu-bar sidemenu-nav-toggler"><img
-                                        src="assets/images/icons/icon-menu.png" alt=""></div> --}}
-                                <a href="/causes" class="primary_btn style-seven">Faire une Dona<i
-                                        class="far fa-heart"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Sticky Menu -->
-
-            <!-- Mobile Menu  -->
-            <div class="mobile-menu">
-                <div class="menu-backdrop"></div>
-                <div class="close-btn"><i class="icon far fa-times"></i></div>
-
-                <nav class="menu-box">
-                    <div class="nav-logo">
-                        <a href="">
-                            <h1 style="color: white;">DONA</h1>
-                        </a>
-                    </div>
-                    <div class="menu-outer"></div>
-                </nav>
-            </div><!-- End Mobile Menu -->
-
-            <div class="nav-overlay"></div>
-        </header>
-
-        <section class="header-widget-sidebar close-sidebar" style="z-index: 9999999999999999999999999999">
-            <div class="wrapper-box" style="z-index: 9999999999999999999999999999">
-                <div class="content-wrapper" style="z-index: 9999999999999999999999999999">
-                    <div class="header-widget-sidebar-close"><span class="far fa-times"></span></div>
-                    <div class="about-widget widget">
-                        <div class="logo" style="text-align: center;align-items:center">
-                            <img style="height: 100px" id="donorgimg" src="{{ asset('assets/images/logo.png') }}" />
-                            <h6 style="color: white;margin-top:5px" id="donorg">Dona</h6>
-                        </div>
-                        <div class="text" id="dontitre" style="text-align: center;font-size:18px"> --- </div>
-                    </div>
-                    <div class="footer-widget-item recent-news-widget widget">
-                        <div class="counter-block-three-single style-seven">
-                            <h4 class="title">Collecté<span style="color: white" id="doncollecte"> -- </span> f</h4>
-                            <div class="bar">
-                                <div class="count-text clr3"> <span id="donpercenttext">--</span> % </div>
-                                <div class="bar-inner bg4 count-bar" id="donpercent" data-percent="0"> </div>
-                            </div>
-                            <ul>
-                                <li>Objectif<span class="crl4" id="donobj"> -- </span> f</li>
-                                {{-- <li>Collecté<span class="crl2"> {{$cause->collecte??0}} f</span></li> --}}
-                                <li>Reste<span class="crl3" id="donreste"> -- </span> f</li>
-                            </ul>
-                        </div>
-                        <div class="project-o" style="margin-top:15px">
-                            <ul class="donation-ant" style="margin-top:15px">
-                                <li class="price-value donation-form-one-price-value" style=""
-                                    onclick="insertMontant(10000)" data-dollars='1000'>10 000 f</li>
-                                    <li class="price-value donation-form-one-price-value"
-                                    onclick="insertMontant(50000)" data-dollars='1000'>50 000 f</li>
-                                    <li class="price-value donation-form-one-price-value"
-                                    onclick="insertMontant(100000)" data-dollars='1000'>100 000 f</li>
-                            </ul>
-                        </div>
-
-
-                        <form action="{{ route('paye') }}" method="post">
-                            {{ csrf_field() }}
-
-                            <div class="form" style="position: relative;width:100%;margin-top: 20px">
-                                <input name="montant" class="input" placeholder="Entrez votre montant"
-                                    id="montant" required type="number">
-                                <span class="input-border"></span>
-                            </div>
-                            <div class="form" style="position: relative;width:100%;margin-top: 20px">
-                                <input name="numero" class="input" placeholder="Entrez votre numero (ex: 0574386145)"
-                                    id="montant" required type="tel" pattern="[0-9]{10}" required="Veuillez rentrer un numero a 10 chiffres svp">
-                                <span class="input-border"></span>
-                            </div>
-                            <div class="checkbox-wrapper" style="margin-top: 20px;margin-bottom: 20px">
-                                <input id="terms-checkbox-37" name="informe" type="checkbox"
-                                    style="background: white">
-                                <label onclick="document.getElementById('informe').style.display=='none'?document.getElementById('informe').style.display='block':document.getElementById('informe').style.display='none'" class="terms-label" for="terms-checkbox-37">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200"
-                                        class="checkbox-svg">
-                                        <mask fill="white" id="path-1-inside-1_476_5-37">
-                                            <rect height="200" width="200"></rect>
-                                        </mask>
-                                        <rect mask="url(#path-1-inside-1_476_5-37)" stroke-width="40"
-                                            class="checkbox-box" height="200" width="200"></rect>
-                                        <path stroke-width="15" d="M52 111.018L76.9867 136L149 64"
-                                            class="checkbox-tick"></path>
-                                    </svg>
-                                    <span
-                                        class="label-text">être informer des impacts de mon don</span>
-                                </label>
-                            </div>
-
-
-
-                            <div id="informe" style="display: none">
-                                <input class="id" name="id" id="id" type="hidden">
-
-                                <div class="form" style="position: relative;width:100%">
-                                    <input class="input" name="email" placeholder="Entrez votre mail" type="email">
-                                    <span class="input-border"></span>
-                                </div>
-                                <div class="form" style="position: relative;width:100%">
-                                    <input class="input" name="nom" placeholder="Entrez votre nom (optionnel)" type="text">
-                                    <span class="input-border"></span>
-                                </div>
-                            </div>
-                            <center>
-                                <div class="from-button"><button class="primary_btn-one donate_button">Faire une
-                                        dona<i class="far fa-heart"></i></button></div>
-                            </center>
-                        </form>
-
-                        {{-- <h4>Flux Instagram</h4>
-                        <div class="footer-widget-news">
-                            <ul>
-                                <li>
-                                    <div class="img-box">
-                                        <img src="assets/images/resource/footer-1.jpg" alt="">
-                                    </div>
-                                    <div class="text-box">
-                                        <p><span class="far fa-calendar-alt"></span>24 janvier 2023</p>
-                                        <h6><a href="blog-details.html">Rejoignez-nous dans notre mission pour une philanthropie transparente.</a></h6>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="img-box">
-                                        <img src="assets/images/resource/footer-2.jpg" alt="">
-                                    </div>
-                                    <div class="text-box">
-                                        <p><span class="far fa-calendar-alt"></span>24 janvier 2023</p>
-                                        <h6><a href="blog-details.html">Découvrez les histoires de ceux que nous avons aidés grâce à vos dons.</a></h6>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div> --}}
-                    </div>
-                    {{-- <div class="widget contact-widget">
-                        <div class="footer-widget-item">
-                            <div class="title">
-                                <p>Besoin d'aide? nous contacter</p>
-                            </div>
-                            <div class="our-info">
-                                <div class="text">
-                                    <p>Notre mission est de renforcer la confiance dans les dons en ligne en garantissant transparence et traçabilité. Avec DONA, chaque don fait une différence tangible.</p>
-                                </div>
-                            </div>
-                            <div class="icon-list">
-                                <ul>
-                                    <li>
-                                        <div class="icon"><i class="far fa-map-marker-alt"></i></div>
-                                        <div class="text-location">Cocody Deux plateau, Rue k104</div>
-                                    </li>
-                                    <li>
-                                        <div class="icon"><i class="far fa-envelope"></i></div>
-                                        <div class="text"><a href="email:support@dona.com">support@dona.com</a></div>
-                                    </li>
-                                    <li>
-                                        <div class="icon"><i class="far fa-phone"></i></div>
-                                        <div class="text"><a href="tel:+012(345)6789">+225 07 88 36 4403</a> </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> --}}
-                </div>
-            </div>
-        </section>
-
-
-        @yield('content')
-
-
-
-        <footer class="main-footer">
-
-            <!-- start footer conter section -->
-            <div class="section-footer-countr-section">
-                <div class="theme_container">
-                    <img style="width: 100px;height:90px" src="{{ asset('assets/images/logo.png') }}"
-                        alt=""> changer une vie
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="footer-counter-block">
-                                <div class="count-outer count-box">
-                                    <span class="count-text" data-speed="3000" data-stop="5000000">0</span><span
-                                        class="plus"> f+</span>
-                                    <span class="crl3">
-                                        Levé pour un don</span>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="donation-form-one-form-wrap s-two">
-                                <ul class="donation-form-one-form-wrap-ul donate_form_amount_wrap">
-                                    <li class="donation-form-one-price-value" data-dollars='1000'>100 000 F</li>
-                                    <li class="donation-form-one-price-value" data-dollars='500'>50 000 F</li>
-                                    <li class="donation-form-one-price-value" data-dollars='100'>30 000 F</li>
-                                    <li class="donation-form-one-price-value" data-dollars='25'>15 000 F</li>
-                                    {{-- <li class="donation-form-one-price-value" data-dollars='25'>Autre</li> --}}
-
-                                    <li class="other-input"></li>
-                                </ul>
-                                <div class="donation-form-one-submit-btn"><button
-                                        class="primary_btn-one donate_button" type="submit">Dona<i
-                                            class="far fa-heart"></i></button></div>
-                            </div>
-                            {{-- <div class="donate-fomr-popup donate-form-s-one">
-                        <div class="donate-fomr-popup-outer">
-                            <div class="donate-fomr-popup-inner">
-                                <div class="donate-fomr-popup-close"><i class="fas fa-times"></i></div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title">Informations Personnelles</h3>
-                                    </div>
-                                    <div class="panel-body">
-                                        <form id="formulaire-donation">
-                                            <div class="form-group">
-                                                <input id="nom_complet" name="nom_complet" type="text" placeholder="Nom complet" class="form-control" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <input id="email" name="email" type="email" placeholder="Email (Facultatif)" class="form-control">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="checkbox" id="rester_anonyme" name="rester_anonyme">
-                                                <label for="rester_anonyme">Rester Anonyme</label>
-                                            </div>
-                                            <div class="form-group">
-                                                <input id="numero_momo" name="numero_momo" type="text" placeholder="Numéro Mobile Money" class="form-control" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <input id="montant_don" name="montant_don" type="number" placeholder="Montant du don" class="form-control" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="checkbox" id="suivre_actions" name="suivre_actions">
-                                                <label for="suivre_actions">Suivre les actions relatives à ce don</label>
-                                            </div>
-                                            <button type="button" onclick="
-                                              var form = document.getElementById('formulaire-donation');
-                                              var nomComplet = form.nom_complet.value;
-                                              var email = form.email.value;
-                                              var resterAnonyme = form.rester_anonyme.checked;
-                                              var numeroMomo = form.numero_momo.value;
-                                              var montantDon = form.montant_don.value;
-
-                                              if (!resterAnonyme && (!nomComplet || !email)) {
-                                                alert('Veuillez entrer le nom complet et l\'email ou choisir de rester anonyme.');
-                                                return;
-                                              }
-
-                                              if (!numeroMomo || !montantDon) {
-                                                alert('Veuillez entrer le numéro Mobile Money et le montant du don.');
-                                                return;
-                                              }
-
-                                              alert('Paiement en cours de traitement...');  // Remplacer par votre propre logique
-                                            ">Soumettre</button>
-                                        </form>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div> --}}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{-- <div class="main-footer-top">
-                <div class="theme_container">
-                    <div class="widgets-section">
-                        <div class="row clearfix">
-
-                            <!--Start Footer Widget Item-->
-                            <div class="col-xl-3 col-md-6 wow animated fadeInUp" data-wow-delay="0.1s">
-                                <div class="footer-widget-item">
-                                    <div class="title">
-                                        <h2>About Us</h2>
-                                    </div>
-
-                                    <div class="our-info">
-                                        <div class="text">
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusanum
-                                                doloremue laudantiue totame</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="icon-list">
-                                        <ul>
-                                            <li>
-                                                <div class="icon"><i class="far fa-map-marker-alt"></i></div>
-                                                <div class="text-location">4486 Richards Avenue, Modesto CA - 95354
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="icon"><i class="far fa-envelope"></i></div>
-                                                <div class="text"><a
-                                                        href="mailto:hotline@gmail.com">hotline@gmail.com</a> </div>
-                                            </li>
-                                            <li>
-                                                <div class="icon"><i class="far fa-phone"></i></div>
-                                                <div class="text"><a href="tel:+012(345)6789">+012 (345) 6789</a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!--End Footer Widget Item-->
-
-                            <!-- Start Footer Widget Item -->
-                            <div class="col-xl-3 col-md-6 wow animated fadeInUp" data-wow-delay="0.3s">
-                                <div class="footer-widget">
-                                    <div class="title">
-                                        <h2>Causes</h2>
-                                    </div>
-                                    <div class="icon-list">
-                                        <ul>
-                                            <li><a href="#"><i
-                                                        class="far fa-arrow-right"></i>Education</a></li>
-                                            <li><a href="#"><i
-                                                        class="far fa-arrow-right"></i>Ecosystems</a></li>
-                                            <li><a href="#"><i
-                                                        class="far fa-arrow-right"></i>Medical</a></li>
-                                            <li><a href="#"><i
-                                                        class="far fa-arrow-right"></i>Foods</a></li>
-                                            <li><a href="#"><i
-                                                        class="far fa-arrow-right"></i>Shelter</a></li>
-                                            <li><a href="#"><i
-                                                        class="far fa-arrow-right"></i>Water</a></li>
-                                            <li><a href="#"><i
-                                                        class="far fa-arrow-right"></i>Donations</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--End Footer Widget Item-->
-
-
-                            <!--Start Footer Widget Item-->
-                            <div class="col-xl-3 col-md-6 wow animated fadeInUp" data-wow-delay="0.3s">
-                                <div class="footer-widget-item mar-t50 s-two">
-                                    <div class="title">
-                                        <h2>Recent News</h2>
-                                    </div>
-
-                                    <div class="footer-widget-news">
-                                        <ul>
-                                            <li>
-                                                <div class="img-box">
-                                                    <a href="blog-details.html"><img
-                                                            src="assets/images/resource/footer-1.jpg"
-                                                            alt="" /></a>
-                                                </div>
-
-                                                <div class="text-box">
-                                                    <p><span class="far fa-calendar-alt"></span><a
-                                                            href="blog-details.html">24th January 2022</a></p>
-                                                    <h6><a href="blog-details.html">We can build anything ni <br>hill
-                                                            ground or building.</a></h6>
-                                                </div>
-                                            </li>
-
-                                            <li>
-                                                <div class="img-box">
-                                                    <img src="assets/images/resource/footer-2.jpg" alt="" />
-                                                </div>
-
-                                                <div class="text-box">
-                                                    <p><span class="far fa-calendar-alt"></span><a
-                                                            href="blog-details.html">24th January 2022</a></p>
-                                                    <h6><a href="blog-details.html">We can build anything ni <br>hill
-                                                            ground or building.</a></h6>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!--End Footer Widget Item-->
-
-
-                            <!--Start Footer Widget Item-->
-                            <div class="col-xl-3 col-md-6 wow animated fadeInUp" data-wow-delay="0.5s">
-                                <div class="footer-widget-item-2 mar-l13">
-                                    <div class="title">
-                                        <h2>Newsletter</h2>
-                                    </div>
-
-                                    <div class="footer-widget-newsletter">
-                                        <p>Subscribe our newsletter to get our <br> latest updates & news.</p>
-                                        <div class="subscribe-box">
-                                            <form class="subscribe-form" action="#">
-                                                <div class="input-box">
-                                                    <input type="email" name="email" placeholder="Enter Email">
-                                                    <button type="submit"><span
-                                                            class="far fa-arrow-right"></span></button>
-                                                </div>
-                                            </form>
-                                        </div>
-
-                                        <div class="social-link">
-                                            <ul>
-                                                <li><a href="#"><i class="fab fa-facebook-f"></i></a>
-                                                </li>
-
-                                                <li><a href="#"><i class="fab fa-twitter"></i></a>
-                                                </li>
-
-                                                <li><a href="#"><i class="fab fa-youtube"></i></a>
-                                                </li>
-
-                                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!--End Footer Widget Item-->
-
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
-
-
-            <!--Start Main Footer Bottom -->
-            <div class="main-footer-bottom">
-                <div class="theme_container">
-                    <div class="main-footer-bottom-inner">
-                        <ul>
-                            <li><a href="#">Politique de confidentialité</a></li>
-                            {{-- <li><a href="#">Privacy & Policy</a></li> --}}
-
-                        </ul>
-                        <div class="text">
-                            <p>Copyright © 2023 Dona. Tout droits Reservé.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--End Main Footer Bottom -->
-        </footer>
-
-    </div>
-
-
-    <a href="# " id="topp" class="back-to-top " data-wow-duration="1.0s " data-wow-delay="1.0s ">
-        <i class="fas fa-angle-up "></i>
-    </a>
-
-    <script>
-        function show(cause) {
-            console.log(111, cause)
-            // document.getElementById('topp').display='none'
-
-            document.getElementById('id').value = cause['id']
-            document.getElementById('donorgimg').src = window.location.origin + '/storage/' + cause['organisations']['logo']
-            document.getElementById('donorg').innerText = cause['organisations']['nom']
-            document.getElementById('dontitre').innerText = cause['libelle']
-            document.getElementById('doncollecte').innerText = parseInt(cause['collecte'] ?? 0)
-            document.getElementById('donobj').innerText = parseInt(cause['objectif'] ?? 0)
-            document.getElementById('donreste').innerText = parseInt(cause['objectif'] ?? 0) - parseInt(cause['collecte'] ??
-                0)
-            document.getElementById('donpercenttext').innerText = Number.parseFloat((parseInt(cause['collecte'] ?? 0) / parseInt(cause[
-                'objectif'] ?? 0)) * 100).toFixed(0);
-            document.getElementById('donpercent').setAttribute("data-percent", (parseInt(cause['collecte'] ?? 0) / parseInt(
-                cause['objectif'] ?? 0)) * 100 + "%")
-
-        }
-
-        function insertMontant(mtn) {
-            document.getElementById('montant').value = mtn
-
-        }
-    </script>
-    <style>
-        .form {
-            --width-of-input: 200px;
-            --border-height: 1px;
-            --border-before-color: rgba(221, 221, 221, 0.39);
-            --border-after-color: #FF7200;
-            --input-hovered-color: #4985e01f;
-            position: relative;
-            width: var(--width-of-input);
-        }
-
-        /* styling of Input */
-        .input {
-            color: #fff;
-            font-size: 0.9rem;
-            background-color: transparent;
-            width: 100%;
-            box-sizing: border-box;
-            padding-inline: 0.5em;
-            padding-block: 0.7em;
-            border: none;
-            border-bottom: var(--border-height) solid var(--border-before-color);
-        }
-
-        /* styling of animated border */
-        .input-border {
-            position: absolute;
-            background: var(--border-after-color);
-            width: 0%;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            transition: 0.3s;
-        }
-
-        /* Hover on Input */
-        input:hover {
-            background: var(--input-hovered-color);
-        }
-
-        input:focus {
-            outline: none;
-        }
-
-        /* here is code of animated border */
-        input:focus~.input-border {
-            width: 100%;
-        }
-
-        /* === if you want to do animated border on typing === */
-        /* remove input:focus code and uncomment below code */
-        /* input:valid ~ .input-border{
-  width: 100%;
-} */
-
-
-
-
-        .checkbox-wrapper input[type="checkbox"] {
-            display: none;
-        }
-
-        .checkbox-wrapper .terms-label {
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-        }
-
-        .checkbox-wrapper .terms-label .label-text {
-            margin-left: 10px;
-        }
-
-        .checkbox-wrapper .checkbox-svg {
-            width: 20px;
-            height: 20px;
-        }
-
-        .checkbox-wrapper .checkbox-box {
-            fill: #fff;
-            stroke: #FF7200;
-            stroke-dasharray: 800;
-            stroke-dashoffset: 800;
-            transition: stroke-dashoffset 0.6s ease-in;
-        }
-
-        .checkbox-wrapper .checkbox-tick {
-            stroke: #FF7200;
-            stroke-dasharray: 172;
-            stroke-dashoffset: 172;
-            transition: stroke-dashoffset 0.6s ease-in;
-        }
-
-        .checkbox-wrapper input[type="checkbox"]:checked+.terms-label .checkbox-box,
-        .checkbox-wrapper input[type="checkbox"]:checked+.terms-label .checkbox-tick {
-            stroke-dashoffset: 0;
-        }
-    </style>
-
-    {{-- <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script> --}}
-    <script src="{{ asset('assets/js/jquery.js') }}"></script>
-    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery.fancybox.js') }}"></script>
-    <script src="{{ asset('assets/js/isotope.js') }}"></script>
-    <script src="{{ asset('assets/js/owl.js') }}"></script>
-    <script src="{{ asset('assets/js/appear.js') }}"></script>
-    <script src="{{ asset('assets/js/wow.js') }}"></script>
-    <script src="{{ asset('assets/js/swiper.min.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery.ajaxchimp.min.js') }}"></script>
-    <script src="{{ asset('assets/js/knob.js') }}"></script>
-    <script src="{{ asset('assets/js/TweenMax.min.js') }}"></script>
-    <script src="{{ asset('assets/js/jquery.nice-select.min.js') }}"></script>
-    <script src="{{ asset('assets/js/active.js') }}"></script>
-
-
-
-    @yield('extra-js')
-
+<body bgcolor="#f7f7f7">
+<table align="center" cellpadding="0" cellspacing="0" class="container-for-gmail-android" width="100%">
+    <tr>
+        <td align="left" valign="top" width="100%" style="background:repeat-x url(http://s3.amazonaws.com/swu-filepicker/4E687TRe69Ld95IDWyEg_bg_top_02.jpg) #FF7200 ;">
+          <center>
+          <img src="http://s3.amazonaws.com/swu-filepicker/SBb2fQPrQ5ezxmqUTgCr_transparent.png" class="force-width-gmail">
+            <table cellspacing="0" cellpadding="0" width="100%" bgcolor="#FF7200" background="http://s3.amazonaws.com/swu-filepicker/4E687TRe69Ld95IDWyEg_bg_top_02.jpg" style="background-color:#FF7200">
+              <tr>
+                <td width="100%" height="80" valign="top" style="text-align: center; vertical-align:middle;">
+                <!--[if gte mso 9]>
+                <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="mso-width-percent:1000;height:80px; v-text-anchor:middle;">
+                  <v:fill type="tile" src="http://s3.amazonaws.com/swu-filepicker/4E687TRe69Ld95IDWyEg_bg_top_02.jpg" color="#ffffff" />
+                  <v:textbox inset="0,0,0,0">
+                <![endif]-->
+                  <center>
+                    <table cellpadding="0" cellspacing="0" width="600" class="w320">
+                      <tr>
+                        <td class="pull-left mobile-header-padding-left" style="vertical-align: middle;">
+                          <a href="https://dona.com"><img width="100" height="80" src="http://dona.codeur.tech/public/assets/images/lgo.png" alt=""></a>
+                        </td>
+                        <td class="pull-right mobile-header-padding-right" style="color: #4d4d4d;">
+                          <!-- <a href=""><img width="44" height="47" src="http://s3.amazonaws.com/swu-filepicker/k8D8A7SLRuetZspHxsJk_social_08.gif" alt="twitter" /></a> -->
+                          <a href=""><img width="38" height="47" src="http://s3.amazonaws.com/swu-filepicker/LMPMj7JSRoCWypAvzaN3_social_09.gif" alt="" /></a>
+                          <!-- <a href=""><img width="40" height="47" src="http://s3.amazonaws.com/swu-filepicker/hR33ye5FQXuDDarXCGIW_social_10.gif" alt="rss" /></a> -->
+                        </td>
+                      </tr>
+                    </table>
+                  </center>
+                  <!--[if gte mso 9]>
+                  </v:textbox>
+                </v:rect>
+                <![endif]-->
+                </td>
+              </tr>
+            </table>
+          </center>
+        </td>
+      </tr>
+  <tr>
+    <td align="center" valign="top" width="100%" style="background-color: #f7f7f7;" class="content-padding">
+      <center>
+        <table cellspacing="0" cellpadding="0" width="600" class="w320">
+          <tr>
+            <td class="header-lg">
+             Votre Don a été reçu avec Succès !
+            </td>
+          </tr>
+          <tr>
+            <td class="free-text">
+                Cher(e) {{$data['nom']??'Donateur'}},<br>
+
+                Merci pour votre don à <b>{{$cause->organisations->nom}}</b> pour la cause : <b>  {{$cause->libelle}} </b>! Votre générosité est précieuse et contribue grandement à notre mission. <br> <br>
+
+                Bonne nouvelle : avec <b>"Suivre Mon Don"</b>, vous verrez l'impact de votre don en temps réel. Attendez-vous à des mises à jour, photos, vidéos et histoires inspirantes directement dans votre boîte mail, illustrant comment votre contribution <b>change des vies</b>.
+            </td>
+          </tr>
+          <tr>
+            <td class="mini-block-container">
+              <table cellspacing="0" cellpadding="0" width="100%"  style="border-collapse:separate !important;">
+                <tr>
+                  <td class="mini-block">
+                    <table cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td class="progress-bar">
+                          <table cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+
+                              <!-- STEP ONE -->
+                              <td class="step ">
+                                <img src="http://s3.amazonaws.com/swu-filepicker/0oYLLViRBKv7a0Lzh6vC_v3_03.jpg" alt="step one" /><br />
+                                Don reçu
+                              </td>
+
+                               <!-- STEP TWO -->
+                              <td class="step active">
+                                <img src="http://s3.amazonaws.com/swu-filepicker/YL3H3V5bRyGuy6pess9T_v33_04.jpg" alt="step two" /><br />
+                                Suivi en Temps Réel
+                              </td>
+
+                               <!-- STEP THREE -->
+                              <td class="step">
+                                <img src="http://s3.amazonaws.com/swu-filepicker/YSTlgtgaTSa897tPTUhl_v3_05.jpg" alt="step three" />
+                                Impact Réalisé
+                              </td>
+
+                            </tr>
+                            <tr>
+
+
+                            </tr>
+
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="button">
+                            Nous nous engageons à vous tenir informé(e) et impliqué(e) tout au long de ce voyage.
+                            <br>
+                           <b> Encore une fois, merci pour votre soutien.</b>
+
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center" valign="top" width="100%" style="background-color: #f7f7f7; height: 100px;">
+      <center>
+        <table cellspacing="0" cellpadding="0" width="600" class="w320">
+          <tr>
+
+            <td style="padding: 25px 0 25px">
+              <strong>https://dona.com</strong><br />
+              Côte d'ivoire , Abidjan <br />
+              +225 05 74 38 6149<br> &copy;
+              2024 Dona , Tous droits réservés. <br /><br />
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
 </body>
-
 </html>
