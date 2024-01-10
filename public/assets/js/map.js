@@ -58,6 +58,7 @@ const map = new mapboxgl.Map({
             pcollecte : "100",
             icon: "icon-coeur",
             image: "storage/sri-slPl.jpg",
+            lien:"1"
           },
         },
         {
@@ -70,9 +71,10 @@ const map = new mapboxgl.Map({
             title: "Collecte Spécial Noël veuves et Orphelins",
             objectif:"5 000 000",
             reste : "3 000 000",
-            pcollecte : "2 000 000",
+            pcollecte : "40",
             icon: "icon-coeur",
             video: "https://www.youtube.com/embed/qqoajG2RHlU", // Autre lien YouTube aléatoire pour le test
+            lien:"4"
           },
         },
         {
@@ -85,9 +87,60 @@ const map = new mapboxgl.Map({
               title: "Donnons un souris à de nombreuse famille",
               objectif:"5 000 000",
               reste : "4 500 000",
-              pcollecte : "500 000",
+              pcollecte : "10",
               icon: "icon-coeur",
-              image: "storage/sri-slPl.jpg",
+              image: "storage/whatsapp-image-2023-12-03-a-175931-399120d1-f4K7.jpg",
+              lien:"5"
+            },
+          },
+          {
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [-5.0404, 7.6787], // Bouake
+            },
+            properties: {
+              title: "Aidez à Nourrir les Enfants de l'Orphelinat de Bouake",
+              objectif:"2 000 000",
+              reste : "1 000 000",
+              pcollecte : "50",
+              icon: "icon-coeur",
+              image: "storage/charity-2-cviJ.jpg",
+              lien:"5"
+            },
+          },
+
+          {
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates:  [-3.7388, 5.2319], // GB
+            },
+            properties: {
+              title: "Donner pour l'éducation des enfants defavorisés de donakro pour un avenir meilleur",
+              objectif:"1 500 000",
+              reste : "500 000",
+              pcollecte : "67",
+              icon: "icon-coeur",
+              image: "storage/charity-2-cviJ.jpg",
+              lien:"5"
+            },
+          },
+
+          {
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [-3.8856, 6.3846], //akoupe
+            },
+            properties: {
+              title: "Arbre de Noël Akoupé",
+              objectif:"5 000 000",
+              reste : "3 000 000",
+              pcollecte : "40",
+              icon: "icon-coeur",
+              video: "https://www.youtube.com/embed/qqoajG2RHlU", // Autre lien YouTube aléatoire pour le test
+              lien:"4"
             },
           },
 
@@ -216,8 +269,7 @@ const map = new mapboxgl.Map({
   })
 
   map.on("click", "events-point", function (e) {
-    const lien = e.features[0].lien;
-    document.location.href=lien
+    document.location.href="causes/"+e.features[0].properties.lien
   });
 
 // =====================================================
