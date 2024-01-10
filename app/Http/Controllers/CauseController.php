@@ -75,8 +75,8 @@ class CauseController extends Controller
         $collection = new MtnCollection($config);
         // $indice = '225';
         $params = [
-            "mobileNumber"      => '2250574386145',//$indice.  $numero,  // "mobileNumber"      => $indice. '0586953562',
-            "amount"            => '10', //$prix,
+            "mobileNumber"      => '225'.$numero,//$indice.  $numero,  // "mobileNumber"      => $indice. '0586953562',
+            "amount"            => $prix , //$prix,
             "externalId"        => '774747234',
             "payerMessage"      => 'dona',
             "payeeNote"         => '1212'
