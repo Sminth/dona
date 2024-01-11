@@ -19,7 +19,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://dona-ten.vercel.app/",
+        "APP_URL": "https://dona-ten.vercel.app",
         "APP_KEY": "base64:lRqsOraAPIXudR2QIhDl4OExrc1Q+/dUKgw3BA5ZPwY=",
 
 
