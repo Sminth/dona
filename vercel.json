@@ -35,8 +35,9 @@
         "SESSION_DRIVER": "cookie",
 
         "DB_CONNECTION": "mysql",
+        "DB_HOST":"db4free.net",
         "DB_PORT": "3306",
-        "DB_DATABASE":"dona",
+        "DB_DATABASE":"donadb",
         "DB_USERNAME":"sminth",
         "DB_PASSWORD":"malan225"
 
