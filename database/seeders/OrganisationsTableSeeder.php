@@ -38,7 +38,7 @@ class OrganisationsTableSeeder extends Seeder
             array (
                 'id' => 2,
                 'nom' => 'Bakan Association',
-                'logo' => NULL,
+                'logo' => 'bk-8pKG.png',
                 'responsable' => NULL,
                 'description' => '<p>un geste, un sourire, une vie transformée</p>',
                 'lien_facebook' => NULL,
@@ -47,24 +47,24 @@ class OrganisationsTableSeeder extends Seeder
                 'email' => NULL,
                 'whatsapp' => '+2250712535804',
                 'created_at' => '2023-12-06 14:10:45',
-                'updated_at' => '2023-12-06 14:11:09',
+                'updated_at' => '2024-01-11 07:18:06',
             ),
             2 => 
             array (
                 'id' => 3,
                 'nom' => 'Dona',
-                'logo' => 'twemoji12-2764svg-W2Kl.png',
+                'logo' => 'logo-i9IE.png',
                 'responsable' => NULL,
-                'description' => '<p>Doan est une organisation qui vise à centraliser tous les appels aux dons d\'organisations
+                'description' => '<p>Dona est une organisation qui vise à centraliser tous les appels aux dons d\'organisations
 vérifiées comme des associations, des ONG etc, pour permettre&nbsp;aux
 utilisateurs de faire des dons en toute confiance via MTN Mobile Money<br></p>',
                 'lien_facebook' => NULL,
                 'lien_insta' => NULL,
-                'numero' => NULL,
+                'numero' => '+2250788364403',
                 'email' => NULL,
-                'whatsapp' => NULL,
+                'whatsapp' => '+2250788364403',
                 'created_at' => '2023-12-21 13:39:50',
-                'updated_at' => '2023-12-28 14:34:49',
+                'updated_at' => '2024-01-11 07:17:46',
             ),
         ));
         

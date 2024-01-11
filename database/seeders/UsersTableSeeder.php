@@ -30,6 +30,17 @@ class UsersTableSeeder extends Seeder
                 'created_at' => '2023-12-06 14:06:35',
                 'updated_at' => '2023-12-06 14:06:35',
             ),
+            1 => 
+            array (
+                'id' => 2,
+                'name' => 'Dona',
+                'email' => 'contact@dona-ci.com',
+                'email_verified_at' => NULL,
+                'password' => '$2y$10$EXmNDwGMnAoVU.rmc8SI2.iAFznxyz6qpUeok0WYfQSBppfY4LFoq',
+                'remember_token' => NULL,
+                'created_at' => '2024-01-11 07:10:23',
+                'updated_at' => '2024-01-11 07:10:23',
+            ),
         ));
         
         

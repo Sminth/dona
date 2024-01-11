@@ -1,0 +1,4 @@
+# .vercelignore 6iiLdKH6SHZQZaKOgaOzG4D5
+
+/vendor
+/public/build
